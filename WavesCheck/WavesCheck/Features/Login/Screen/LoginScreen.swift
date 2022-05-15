@@ -7,7 +7,19 @@
 
 import UIKit
 
+protocol LoginScreenProtocol: AnyObject {
+    func actionforgotPasswordButton()
+    func actionSignInButton()
+    func actionRegisterButton()
+}
+
 class LoginScreen: UIView {
+    
+    weak private var delegate: LoginScreenProtocol?
+    
+    func delegate(delegate: LoginScreenProtocol?) {
+        self.delegate = delegate
+    }
 
     lazy var loginLabel: UILabel = {
         let label = UILabel()
@@ -97,6 +109,7 @@ class LoginScreen: UIView {
         self.configBackGround()
         self.addSubView()
         self.setUpConstraints()
+        enableButton(false)
     }
     
     required init?(coder: NSCoder) {
@@ -106,12 +119,40 @@ class LoginScreen: UIView {
     //MARK: - OBJC Functions
     
     @objc private func didTapforgotPasswordButton() {
+        delegate?.actionforgotPasswordButton()
     }
     
     @objc private func didTapSignInButton() {
+        delegate?.actionSignInButton()
     }
     
     @objc private func didTapSignUpButton() {
+        delegate?.actionRegisterButton()
+    }
+    
+    //MARK: - Public Functions
+    
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.emailTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
+    }
+    
+    public func validateTextField() {
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            self.enableButton(true)
+        } else {
+            self.enableButton(false)
+        }
+    }
+    
+    private func enableButton(_ enable: Bool) {
+        if enable {
+            self.signInButton.isEnabled = true
+            self.signInButton.setTitleColor(.white, for: .normal)
+        } else {
+            self.signInButton.isEnabled = false
+            self.signInButton.setTitleColor(.lightGray, for: .normal)
+        }
     }
 
     
