@@ -18,6 +18,8 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerScreen?.delegate(delegate: self)
+        registerScreen?.configTextFieldDelegate(delegate: self)
     }
 }
 
@@ -35,7 +37,7 @@ extension RegisterViewController: RegisterScreenProtocol {
 
 //MARK: - UITextFieldDelegate
 
-extension RegisterViewController {
+extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         registerScreen?.validateTextField()
