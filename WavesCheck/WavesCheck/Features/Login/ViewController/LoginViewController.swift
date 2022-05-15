@@ -12,8 +12,8 @@ class LoginViewController: UIViewController {
     var loginScreen: LoginScreen?
     
     override func loadView() {
-        self.loginScreen = LoginScreen()
-        self.view = self.loginScreen
+        loginScreen = LoginScreen()
+        view = loginScreen
     }
     
     override func viewDidLoad() {
