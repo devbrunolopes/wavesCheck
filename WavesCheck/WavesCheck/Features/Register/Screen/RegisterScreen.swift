@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol RegisterScreenProtocol: AnyObject {
+    func backButtonAction()
+    func registerButtonAction()
+}
+
 class RegisterScreen: UIView {
+    
+    weak private var delegate: RegisterScreenProtocol?
+    
+    func delegate(delegate: RegisterScreenProtocol?) {
+        self.delegate = delegate
+    }
 
     lazy var backButton: UIButton = {
         let button = UIButton()
@@ -72,7 +83,7 @@ class RegisterScreen: UIView {
         return textField
     }()
     
-    lazy var signUpButton: UIButton = {
+    lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
@@ -81,7 +92,7 @@ class RegisterScreen: UIView {
         button.setTitle("Cadastrar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(self.didTapSignUpButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.didTapRegisterButton), for: .touchUpInside)
         return button
     }()
     
@@ -89,9 +100,10 @@ class RegisterScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.configBackGround()
-        self.addSubView()
-        self.setUpConstraints()
+        configBackGround()
+        addSubView()
+        setUpConstraints()
+        enableButton(true)
     }
     
     required init?(coder: NSCoder) {
@@ -101,11 +113,11 @@ class RegisterScreen: UIView {
     //MARK: - @OBJC Functions
     
     @objc private func didTapbackButton() {
-//        self.delegate?.actionBackButton()
+        delegate?.backButtonAction()
     }
     
-    @objc private func didTapSignUpButton() {
-//        self.delegate?.actionSignUpButton()
+    @objc private func didTapRegisterButton() {
+        delegate?.registerButtonAction()
     }
     
     //MARK: - Public Functions
@@ -136,16 +148,16 @@ class RegisterScreen: UIView {
         self.addSubview(self.userNameTextField)
         self.addSubview(self.emailTextField)
         self.addSubview(self.passwordTextField)
-        self.addSubview(self.signUpButton)
+        self.addSubview(self.registerButton)
     }
     
     private func enableButton(_ enable: Bool) {
         if enable {
-            self.signUpButton.isEnabled = true
-            self.signUpButton.setTitleColor(.white, for: .normal)
+            self.registerButton.isEnabled = true
+            self.registerButton.setTitleColor(.white, for: .normal)
         } else {
-            self.signUpButton.isEnabled = false
-            self.signUpButton.setTitleColor(.lightGray, for: .normal)
+            self.registerButton.isEnabled = false
+            self.registerButton.setTitleColor(.lightGray, for: .normal)
         }
     }
     
@@ -178,10 +190,10 @@ class RegisterScreen: UIView {
             self.passwordTextField.trailingAnchor.constraint(equalTo: self.userNameTextField.trailingAnchor),
             self.passwordTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            self.signUpButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 40),
-            self.signUpButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.signUpButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            self.signUpButton.heightAnchor.constraint(equalToConstant: 40)
+            self.registerButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 40),
+            self.registerButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
+            self.registerButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
+            self.registerButton.heightAnchor.constraint(equalToConstant: 40)
             
         ])
     }

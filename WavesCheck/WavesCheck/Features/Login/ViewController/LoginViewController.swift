@@ -57,13 +57,13 @@ extension LoginViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 1.0
-        self.loginScreen?.validateTextField()
+        loginScreen?.validateTextField()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == self.loginScreen?.emailTextField {
-            self.loginScreen?.passwordTextField.becomeFirstResponder()
-        } else if textField == self.loginScreen?.passwordTextField {
+        if textField == loginScreen?.emailTextField {
+            loginScreen?.passwordTextField.becomeFirstResponder()
+        } else if textField == loginScreen?.passwordTextField {
             textField.resignFirstResponder()
         }
         return true
