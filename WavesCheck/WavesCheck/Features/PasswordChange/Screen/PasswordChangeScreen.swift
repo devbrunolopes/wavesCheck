@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol PasswordChangeScreenProtocol: AnyObject {
+    func backButtonAction()
+    func changePasswordButtonAction()
+}
+
 class PasswordChangeScreen: UIView {
+    
+    weak private var delegate: PasswordChangeScreenProtocol?
+    
+    func delegate(delegate: PasswordChangeScreenProtocol?) {
+        self.delegate = delegate
+    }
 
     lazy var backButton: UIButton = {
         let button = UIButton()
@@ -82,9 +93,11 @@ class PasswordChangeScreen: UIView {
     //MARK: - @OBJC Functions
     
     @objc func didTapbackButton() {
+        delegate?.backButtonAction()
     }
     
     @objc func didTapChangePasswordButton() {
+        delegate?.changePasswordButtonAction()
     }
     
     //MARK: - Public Functions
