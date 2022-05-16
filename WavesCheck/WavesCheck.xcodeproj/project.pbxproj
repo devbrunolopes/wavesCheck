@@ -23,6 +23,7 @@
 		88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */; };
 		88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56F283266DB003E5DE5 /* FavoriteSpotsViewController.swift */; };
 		88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC571283266EE003E5DE5 /* ProfileViewController.swift */; };
+		88DEC57528326BF9003E5DE5 /* ForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		88DEC56F283266DB003E5DE5 /* FavoriteSpotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsViewController.swift; sourceTree = "<group>"; };
 		88DEC571283266EE003E5DE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		88DEC5632832661F003E5DE5 /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
+				88DEC57328326BAE003E5DE5 /* Screen */,
 				88DEC56928326669003E5DE5 /* ViewController */,
 			);
 			path = Forecast;
@@ -247,6 +250,14 @@
 				88DEC571283266EE003E5DE5 /* ProfileViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		88DEC57328326BAE003E5DE5 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +344,7 @@
 				881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */,
 				881FF3F22831865300E69CD3 /* SceneDelegate.swift in Sources */,
 				88DEC56828326665003E5DE5 /* ForecastViewController.swift in Sources */,
+				88DEC57528326BF9003E5DE5 /* ForecastScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
