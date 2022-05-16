@@ -18,6 +18,11 @@
 		881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4102831B2B500E69CD3 /* RegisterScreen.swift */; };
 		881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */; };
 		881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */; };
+		88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC5612832654A003E5DE5 /* TabBarController.swift */; };
+		88DEC56828326665003E5DE5 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56728326665003E5DE5 /* ForecastViewController.swift */; };
+		88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */; };
+		88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56F283266DB003E5DE5 /* FavoriteSpotsViewController.swift */; };
+		88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC571283266EE003E5DE5 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		881FF4102831B2B500E69CD3 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreen.swift; sourceTree = "<group>"; };
 		881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
+		88DEC5612832654A003E5DE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		88DEC56728326665003E5DE5 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
+		88DEC56F283266DB003E5DE5 /* FavoriteSpotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsViewController.swift; sourceTree = "<group>"; };
+		88DEC571283266EE003E5DE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,11 @@
 		881FF403283187D400E69CD3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				88DEC5662832663E003E5DE5 /* Profile */,
+				88DEC56528326633003E5DE5 /* FavoriteSpots */,
+				88DEC5642832662C003E5DE5 /* Reports */,
+				88DEC5632832661F003E5DE5 /* Forecast */,
+				88DEC56028326504003E5DE5 /* TabBar */,
 				881FF4122831B82800E69CD3 /* PasswordChange */,
 				881FF40B2831B28200E69CD3 /* Register */,
 				881FF404283187DC00E69CD3 /* Login */,
@@ -162,6 +177,78 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		88DEC56028326504003E5DE5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC5612832654A003E5DE5 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		88DEC5632832661F003E5DE5 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC56928326669003E5DE5 /* ViewController */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		88DEC5642832662C003E5DE5 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC56A28326673003E5DE5 /* ViewController */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		88DEC56528326633003E5DE5 /* FavoriteSpots */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC56B2832667D003E5DE5 /* ViewController */,
+			);
+			path = FavoriteSpots;
+			sourceTree = "<group>";
+		};
+		88DEC5662832663E003E5DE5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC56C283266A5003E5DE5 /* ViewController */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		88DEC56928326669003E5DE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC56728326665003E5DE5 /* ForecastViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		88DEC56A28326673003E5DE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		88DEC56B2832667D003E5DE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC56F283266DB003E5DE5 /* FavoriteSpotsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		88DEC56C283266A5003E5DE5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC571283266EE003E5DE5 /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,15 +319,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */,
 				881FF3F42831865300E69CD3 /* ViewController.swift in Sources */,
 				881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */,
 				881FF3F02831865300E69CD3 /* AppDelegate.swift in Sources */,
+				88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */,
+				88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */,
+				88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */,
 				881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */,
 				881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */,
 				881FF40F2831B2A800E69CD3 /* RegisterViewController.swift in Sources */,
 				881FF40A2831884C00E69CD3 /* LoginViewController.swift in Sources */,
 				881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */,
 				881FF3F22831865300E69CD3 /* SceneDelegate.swift in Sources */,
+				88DEC56828326665003E5DE5 /* ForecastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
