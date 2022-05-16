@@ -25,10 +25,10 @@
 		88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC571283266EE003E5DE5 /* ProfileViewController.swift */; };
 		88DEC57528326BF9003E5DE5 /* ForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */; };
 		88DEC57828327375003E5DE5 /* NearLocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57728327375003E5DE5 /* NearLocationsTableViewCell.swift */; };
-		88DEC57B28327396003E5DE5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57A28327396003E5DE5 /* File.swift */; };
+		88DEC57B28327396003E5DE5 /* NearLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57A28327396003E5DE5 /* NearLocation.swift */; };
 		88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57D28327B3A003E5DE5 /* ReportsScreen.swift */; };
 		88DEC58128327C70003E5DE5 /* ReportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC58028327C70003E5DE5 /* ReportsTableViewCell.swift */; };
-		88DEC58428327D0C003E5DE5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC58328327D0C003E5DE5 /* File.swift */; };
+		88DEC58428327D0C003E5DE5 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC58328327D0C003E5DE5 /* Report.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +52,10 @@
 		88DEC571283266EE003E5DE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastScreen.swift; sourceTree = "<group>"; };
 		88DEC57728327375003E5DE5 /* NearLocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearLocationsTableViewCell.swift; sourceTree = "<group>"; };
-		88DEC57A28327396003E5DE5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		88DEC57A28327396003E5DE5 /* NearLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearLocation.swift; sourceTree = "<group>"; };
 		88DEC57D28327B3A003E5DE5 /* ReportsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsScreen.swift; sourceTree = "<group>"; };
 		88DEC58028327C70003E5DE5 /* ReportsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsTableViewCell.swift; sourceTree = "<group>"; };
-		88DEC58328327D0C003E5DE5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		88DEC58328327D0C003E5DE5 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,7 +286,7 @@
 		88DEC5792832738A003E5DE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				88DEC57A28327396003E5DE5 /* File.swift */,
+				88DEC57A28327396003E5DE5 /* NearLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,7 +310,7 @@
 		88DEC58228327CFB003E5DE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				88DEC58328327D0C003E5DE5 /* File.swift */,
+				88DEC58328327D0C003E5DE5 /* Report.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,7 +390,7 @@
 				881FF3F42831865300E69CD3 /* ViewController.swift in Sources */,
 				881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */,
 				881FF3F02831865300E69CD3 /* AppDelegate.swift in Sources */,
-				88DEC58428327D0C003E5DE5 /* File.swift in Sources */,
+				88DEC58428327D0C003E5DE5 /* Report.swift in Sources */,
 				88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */,
 				88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */,
 				88DEC58128327C70003E5DE5 /* ReportsTableViewCell.swift in Sources */,
@@ -398,7 +398,7 @@
 				881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */,
 				881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */,
 				881FF40F2831B2A800E69CD3 /* RegisterViewController.swift in Sources */,
-				88DEC57B28327396003E5DE5 /* File.swift in Sources */,
+				88DEC57B28327396003E5DE5 /* NearLocation.swift in Sources */,
 				881FF40A2831884C00E69CD3 /* LoginViewController.swift in Sources */,
 				88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */,
 				881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */,
