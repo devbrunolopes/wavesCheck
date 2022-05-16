@@ -24,6 +24,8 @@
 		88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56F283266DB003E5DE5 /* FavoriteSpotsViewController.swift */; };
 		88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC571283266EE003E5DE5 /* ProfileViewController.swift */; };
 		88DEC57528326BF9003E5DE5 /* ForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */; };
+		88DEC57828327375003E5DE5 /* NearLocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57728327375003E5DE5 /* NearLocationsTableViewCell.swift */; };
+		88DEC57B28327396003E5DE5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57A28327396003E5DE5 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		88DEC56F283266DB003E5DE5 /* FavoriteSpotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsViewController.swift; sourceTree = "<group>"; };
 		88DEC571283266EE003E5DE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastScreen.swift; sourceTree = "<group>"; };
+		88DEC57728327375003E5DE5 /* NearLocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearLocationsTableViewCell.swift; sourceTree = "<group>"; };
+		88DEC57A28327396003E5DE5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,8 @@
 		88DEC5632832661F003E5DE5 /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
+				88DEC5792832738A003E5DE5 /* Model */,
+				88DEC5762832734B003E5DE5 /* Cell */,
 				88DEC57328326BAE003E5DE5 /* Screen */,
 				88DEC56928326669003E5DE5 /* ViewController */,
 			);
@@ -258,6 +264,22 @@
 				88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		88DEC5762832734B003E5DE5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC57728327375003E5DE5 /* NearLocationsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		88DEC5792832738A003E5DE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88DEC57A28327396003E5DE5 /* File.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88DEC57828327375003E5DE5 /* NearLocationsTableViewCell.swift in Sources */,
 				88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */,
 				881FF3F42831865300E69CD3 /* ViewController.swift in Sources */,
 				881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */,
@@ -340,6 +363,7 @@
 				881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */,
 				881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */,
 				881FF40F2831B2A800E69CD3 /* RegisterViewController.swift in Sources */,
+				88DEC57B28327396003E5DE5 /* File.swift in Sources */,
 				881FF40A2831884C00E69CD3 /* LoginViewController.swift in Sources */,
 				881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */,
 				881FF3F22831865300E69CD3 /* SceneDelegate.swift in Sources */,
