@@ -106,9 +106,9 @@ class LoginScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.configBackGround()
-        self.addSubView()
-        self.setUpConstraints()
+        configBackGround()
+        addSubView()
+        setUpConstraints()
         enableButton(false)
     }
     
@@ -133,25 +133,25 @@ class LoginScreen: UIView {
     //MARK: - Public Functions
     
     public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
-        self.emailTextField.delegate = delegate
-        self.passwordTextField.delegate = delegate
+        emailTextField.delegate = delegate
+        passwordTextField.delegate = delegate
     }
     
     public func validateTextField() {
         if emailTextField.text != "" && passwordTextField.text != "" {
-            self.enableButton(true)
+            enableButton(true)
         } else {
-            self.enableButton(false)
+            enableButton(false)
         }
     }
     
     private func enableButton(_ enable: Bool) {
         if enable {
-            self.signInButton.isEnabled = true
-            self.signInButton.setTitleColor(.white, for: .normal)
+            signInButton.isEnabled = true
+            signInButton.setTitleColor(.white, for: .normal)
         } else {
-            self.signInButton.isEnabled = false
-            self.signInButton.setTitleColor(.lightGray, for: .normal)
+            signInButton.isEnabled = false
+            signInButton.setTitleColor(.lightGray, for: .normal)
         }
     }
 
@@ -159,7 +159,7 @@ class LoginScreen: UIView {
     //MARK: - Private Functions
     
     private func configBackGround() {
-        self.backgroundColor = .white
+        backgroundColor = .white
     }
     
     private func addSubView() {
@@ -175,35 +175,35 @@ class LoginScreen: UIView {
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
             
-            loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             logoAppImageView.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 20),
             logoAppImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             logoAppImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             logoAppImageView.heightAnchor.constraint(equalToConstant: 150),
             
-            emailTextField.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 30),
-            emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            emailTextField.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 30),
+            emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             emailTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 20),
-            passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
+            passwordTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            passwordTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             passwordTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            forgotPasswordButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 5),
-            forgotPasswordButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            forgotPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 5),
+            forgotPasswordButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
-            signInButton.topAnchor.constraint(equalTo: self.forgotPasswordButton.bottomAnchor, constant: 40),
-            signInButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            signInButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
+            signInButton.topAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor, constant: 40),
+            signInButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            signInButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
             signInButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
-            registerButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            registerButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            registerButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            registerButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            registerButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            registerButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor)
             
         ])
