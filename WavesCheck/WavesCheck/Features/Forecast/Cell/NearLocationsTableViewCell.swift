@@ -27,7 +27,7 @@ class NearLocationsTableViewCell: UITableViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "arrow.right.circle"), for: .normal)
         button.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
-        button.addTarget(self, action: #selector(self.didTapGoButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapGoButton), for: .touchUpInside)
         return button
     }()
     
@@ -53,25 +53,25 @@ class NearLocationsTableViewCell: UITableViewCell {
     //MARK: - Public Functions
     
     public func setUpCell(nearLocation: NearLocation) {
-        self.nearLocationLabel.text = nearLocation.locationName
+        nearLocationLabel.text = nearLocation.locationName
     }
     
     //MARK: - Private Functions
     
     private func addSubView() {
-        self.contentView.addSubview(self.nearLocationLabel)
-        self.contentView.addSubview(self.goButton)
+        contentView.addSubview(nearLocationLabel)
+        contentView.addSubview(goButton)
     }
  
     private func configConstraints() {
         NSLayoutConstraint.activate([
 
-            self.nearLocationLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
-            self.nearLocationLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            self.nearLocationLabel.widthAnchor.constraint(equalToConstant: 500),
+            nearLocationLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            nearLocationLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            nearLocationLabel.widthAnchor.constraint(equalToConstant: 500),
             
-            self.goButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
-            self.goButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15)
+            goButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            goButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15)
             
         ])
     }

@@ -20,11 +20,11 @@ class TabBarController: UITabBarController {
         let item03 = FavoriteSpotsViewController()
         let item04 = ProfileViewController()
         
-        self.setViewControllers([item01, item02, item03, item04], animated: false)
-        self.tabBar.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
-        self.tabBar.barTintColor = .gray
-        self.tabBar.tintColor = .white
-        self.tabBar.isTranslucent = false
+        setViewControllers([item01, item02, item03, item04], animated: false)
+        tabBar.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
+        tabBar.barTintColor = .gray
+        tabBar.tintColor = .white
+        tabBar.isTranslucent = false
         
         guard let items = tabBar.items else {return}
         

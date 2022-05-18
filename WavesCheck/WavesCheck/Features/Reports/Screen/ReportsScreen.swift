@@ -25,7 +25,7 @@ class ReportsScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "plus.circle"), for: .normal)
         button.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
-        button.addTarget(self, action: #selector(self.didTapAddReport), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapAddReport), for: .touchUpInside)
         return button
     }()
     
@@ -42,7 +42,7 @@ class ReportsScreen: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configBackGround()
-        configSuperView()
+        addSubView()
         setUpConstraints()
     }
     
@@ -69,7 +69,7 @@ class ReportsScreen: UIView {
         backgroundColor = .white
     }
     
-    private func configSuperView() {
+    private func addSubView() {
         addSubview(reportsLabel)
         addSubview(addReportButton)
         addSubview(tableView)

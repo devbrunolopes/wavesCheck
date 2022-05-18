@@ -22,7 +22,7 @@ class ReportsViewController: UIViewController {
     
     override func loadView() {
         reportsScreen = ReportsScreen()
-        view = self.reportsScreen
+        view = reportsScreen
     }
     
     override func viewDidLoad() {

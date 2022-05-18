@@ -25,7 +25,7 @@ class RegisterScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "back"), for: .normal)
         button.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
-        button.addTarget(self, action: #selector(self.didTapbackButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapbackButton), for: .touchUpInside)
         return button
     }()
     
@@ -92,7 +92,7 @@ class RegisterScreen: UIView {
         button.setTitle("Cadastrar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(self.didTapRegisterButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
         return button
     }()
     
@@ -123,41 +123,41 @@ class RegisterScreen: UIView {
     //MARK: - Public Functions
     
     public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
-        self.userNameTextField.delegate = delegate
-        self.emailTextField.delegate = delegate
-        self.passwordTextField.delegate = delegate
+        userNameTextField.delegate = delegate
+        emailTextField.delegate = delegate
+        passwordTextField.delegate = delegate
     }
     
     public func validateTextField() {
         if userNameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != "" {
-            self.enableButton(true)
+            enableButton(true)
         } else {
-            self.enableButton(false)
+            enableButton(false)
         }
     }
     
     //MARK: - Private Functions
     
     private func configBackGround() {
-        self.backgroundColor = .white
+        backgroundColor = .white
     }
     
     private func addSubView() {
-        self.addSubview(self.backButton)
-        self.addSubview(self.logoAppImageView)
-        self.addSubview(self.userNameTextField)
-        self.addSubview(self.emailTextField)
-        self.addSubview(self.passwordTextField)
-        self.addSubview(self.registerButton)
+        addSubview(backButton)
+        addSubview(logoAppImageView)
+        addSubview(userNameTextField)
+        addSubview(emailTextField)
+        addSubview(passwordTextField)
+        addSubview(registerButton)
     }
     
     private func enableButton(_ enable: Bool) {
         if enable {
-            self.registerButton.isEnabled = true
-            self.registerButton.setTitleColor(.white, for: .normal)
+            registerButton.isEnabled = true
+            registerButton.setTitleColor(.white, for: .normal)
         } else {
-            self.registerButton.isEnabled = false
-            self.registerButton.setTitleColor(.lightGray, for: .normal)
+            registerButton.isEnabled = false
+            registerButton.setTitleColor(.lightGray, for: .normal)
         }
     }
     
@@ -165,35 +165,35 @@ class RegisterScreen: UIView {
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
         
-            self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            self.backButton.heightAnchor.constraint(equalToConstant: 40),
-            self.backButton.widthAnchor.constraint(equalToConstant: 40),
+            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            backButton.heightAnchor.constraint(equalToConstant: 40),
+            backButton.widthAnchor.constraint(equalToConstant: 40),
             
-            self.logoAppImageView.topAnchor.constraint(equalTo: self.backButton.bottomAnchor, constant: 20),
-            self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-            self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
-            self.logoAppImageView.heightAnchor.constraint(equalToConstant: 150),
+            logoAppImageView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 20),
+            logoAppImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            logoAppImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            logoAppImageView.heightAnchor.constraint(equalToConstant: 150),
             
-            self.userNameTextField.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 50),
-            self.userNameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.userNameTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.userNameTextField.heightAnchor.constraint(equalToConstant: 40),
+            userNameTextField.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 50),
+            userNameTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            userNameTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            userNameTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            self.emailTextField.topAnchor.constraint(equalTo: self.userNameTextField.bottomAnchor, constant: 20),
-            self.emailTextField.leadingAnchor.constraint(equalTo: self.userNameTextField.leadingAnchor),
-            self.emailTextField.trailingAnchor.constraint(equalTo: self.userNameTextField.trailingAnchor),
-            self.emailTextField.heightAnchor.constraint(equalToConstant: 40),
+            emailTextField.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: 20),
+            emailTextField.leadingAnchor.constraint(equalTo: userNameTextField.leadingAnchor),
+            emailTextField.trailingAnchor.constraint(equalTo: userNameTextField.trailingAnchor),
+            emailTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 20),
-            self.passwordTextField.leadingAnchor.constraint(equalTo: self.userNameTextField.leadingAnchor),
-            self.passwordTextField.trailingAnchor.constraint(equalTo: self.userNameTextField.trailingAnchor),
-            self.passwordTextField.heightAnchor.constraint(equalToConstant: 40),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
+            passwordTextField.leadingAnchor.constraint(equalTo: userNameTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: userNameTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            self.registerButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 40),
-            self.registerButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.registerButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            self.registerButton.heightAnchor.constraint(equalToConstant: 40)
+            registerButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
+            registerButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            registerButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            registerButton.heightAnchor.constraint(equalToConstant: 40)
             
         ])
     }

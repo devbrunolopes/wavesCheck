@@ -74,7 +74,7 @@ class LoginScreen: UIView {
         button.setTitle("Esqueceu a senha?", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.setTitleColor(UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0), for: .normal)
-        button.addTarget(self, action: #selector(self.didTapforgotPasswordButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapforgotPasswordButton), for: .touchUpInside)
         return button
     }()
     
@@ -87,7 +87,7 @@ class LoginScreen: UIView {
         button.setTitle("Entrar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(self.didTapSignInButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
         return button
     }()
     
@@ -97,7 +97,7 @@ class LoginScreen: UIView {
         button.setTitle("Não tem conta? Cadastre-se", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0), for: .normal)
-        button.addTarget(self, action: #selector(self.didTapSignUpButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         return button
     }()
     

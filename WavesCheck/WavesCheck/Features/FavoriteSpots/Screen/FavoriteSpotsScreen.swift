@@ -40,7 +40,7 @@ class FavoriteSpotsScreen: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configBackGround()
-        configSuperView()
+        addSubView()
         setUpConstraints()
     }
     
@@ -61,7 +61,7 @@ class FavoriteSpotsScreen: UIView {
         backgroundColor = .white
     }
     
-    private func configSuperView() {
+    private func addSubView() {
         addSubview(titleLabel)
         addSubview(lineView)
         addSubview(tableView)

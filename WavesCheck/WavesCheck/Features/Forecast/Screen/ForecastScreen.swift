@@ -15,7 +15,7 @@ class ForecastScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "location.circle.fill"), for: .normal)
         button.tintColor = .white
-        button.addTarget(self, action: #selector(self.didTapSelfLocationButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapSelfLocationButton), for: .touchUpInside)
         return button
     }()
     
@@ -35,7 +35,7 @@ class ForecastScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
         button.tintColor = .white
-        button.addTarget(self, action: #selector(self.didTapSearchButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapSearchButton), for: .touchUpInside)
         return button
     }()
     
@@ -108,19 +108,19 @@ class ForecastScreen: UIView {
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
 
-            userWelcomeStackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 5),
-            userWelcomeStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            userWelcomeStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            userWelcomeStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
+            userWelcomeStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            userWelcomeStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            mapView.topAnchor.constraint(equalTo: self.userWelcomeStackView.bottomAnchor, constant: 5),
-            mapView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            mapView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            mapView.topAnchor.constraint(equalTo: userWelcomeStackView.bottomAnchor, constant: 5),
+            mapView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            mapView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             mapView.heightAnchor.constraint(equalToConstant: 350),
             
-            tableView.topAnchor.constraint(equalTo: self.mapView.bottomAnchor,constant: 0),
-            tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,constant: 0)
+            tableView.topAnchor.constraint(equalTo: mapView.bottomAnchor,constant: 0),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor,constant: 0)
             
         ])
     }

@@ -197,7 +197,6 @@ class ProfileScreen: UIView {
     }
     
     private func addSubView() {
-        
         addSubview(logoAppImageView)
         addSubview(personalDataLabel)
         addSubview(editPictureButton)
