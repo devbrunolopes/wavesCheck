@@ -23,6 +23,7 @@
 		88614CB628350D7300523FA0 /* LocationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CB528350D7300523FA0 /* LocationName.swift */; };
 		88614CB928350E6C00523FA0 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CB828350E6C00523FA0 /* ProfileScreen.swift */; };
 		88614CBD2835165700523FA0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CBC2835165700523FA0 /* Alert.swift */; };
+		88614CBF28353B1700523FA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88614CBE28353B1700523FA0 /* GoogleService-Info.plist */; };
 		88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC5612832654A003E5DE5 /* TabBarController.swift */; };
 		88DEC56828326665003E5DE5 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56728326665003E5DE5 /* ForecastViewController.swift */; };
 		88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */; };
@@ -34,9 +35,12 @@
 		88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57D28327B3A003E5DE5 /* ReportsScreen.swift */; };
 		88DEC58128327C70003E5DE5 /* ReportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC58028327C70003E5DE5 /* ReportsTableViewCell.swift */; };
 		88DEC58428327D0C003E5DE5 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC58328327D0C003E5DE5 /* Report.swift */; };
+		BD4EAE922E30792F48200F9D /* Pods_WavesCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC1E3384791EB802A4CF80F /* Pods_WavesCheck.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1644D50DBF5C5D3D839955BC /* Pods-WavesCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCheck.release.xcconfig"; path = "Target Support Files/Pods-WavesCheck/Pods-WavesCheck.release.xcconfig"; sourceTree = "<group>"; };
+		3DC1E3384791EB802A4CF80F /* Pods_WavesCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WavesCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		881FF3EC2831865300E69CD3 /* WavesCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WavesCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		881FF3EF2831865300E69CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		881FF3F12831865300E69CD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 		88614CB528350D7300523FA0 /* LocationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationName.swift; sourceTree = "<group>"; };
 		88614CB828350E6C00523FA0 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		88614CBC2835165700523FA0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		88614CBE28353B1700523FA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88DEC5612832654A003E5DE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		88DEC56728326665003E5DE5 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 		88DEC57D28327B3A003E5DE5 /* ReportsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsScreen.swift; sourceTree = "<group>"; };
 		88DEC58028327C70003E5DE5 /* ReportsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsTableViewCell.swift; sourceTree = "<group>"; };
 		88DEC58328327D0C003E5DE5 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		AAE94CA2D4B269D0A994AB8C /* Pods-WavesCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCheck.debug.xcconfig"; path = "Target Support Files/Pods-WavesCheck/Pods-WavesCheck.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,17 +79,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4EAE922E30792F48200F9D /* Pods_WavesCheck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F184B753C5E86EC5ECBB75C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAE94CA2D4B269D0A994AB8C /* Pods-WavesCheck.debug.xcconfig */,
+				1644D50DBF5C5D3D839955BC /* Pods-WavesCheck.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		60DAD94D390A505CBCFDE5D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DC1E3384791EB802A4CF80F /* Pods_WavesCheck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		881FF3E32831865200E69CD3 = {
 			isa = PBXGroup;
 			children = (
 				881FF3EE2831865300E69CD3 /* WavesCheck */,
 				881FF3ED2831865300E69CD3 /* Products */,
+				3F184B753C5E86EC5ECBB75C /* Pods */,
+				60DAD94D390A505CBCFDE5D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +133,7 @@
 				881FF3F82831865400E69CD3 /* Assets.xcassets */,
 				881FF3FA2831865400E69CD3 /* LaunchScreen.storyboard */,
 				881FF3FD2831865400E69CD3 /* Info.plist */,
+				88614CBE28353B1700523FA0 /* GoogleService-Info.plist */,
 			);
 			path = WavesCheck;
 			sourceTree = "<group>";
@@ -385,9 +413,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 881FF4002831865400E69CD3 /* Build configuration list for PBXNativeTarget "WavesCheck" */;
 			buildPhases = (
+				DF88A5821FEF8AF1C610DABA /* [CP] Check Pods Manifest.lock */,
 				881FF3E82831865300E69CD3 /* Sources */,
 				881FF3E92831865300E69CD3 /* Frameworks */,
 				881FF3EA2831865300E69CD3 /* Resources */,
+				FEA6ADB950042757CD7C242D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,10 +468,53 @@
 			files = (
 				881FF3FC2831865400E69CD3 /* LaunchScreen.storyboard in Resources */,
 				881FF3F92831865400E69CD3 /* Assets.xcassets in Resources */,
+				88614CBF28353B1700523FA0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF88A5821FEF8AF1C610DABA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WavesCheck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEA6ADB950042757CD7C242D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WavesCheck/Pods-WavesCheck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WavesCheck/Pods-WavesCheck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WavesCheck/Pods-WavesCheck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		881FF3E82831865300E69CD3 /* Sources */ = {
@@ -608,6 +681,7 @@
 		};
 		881FF4012831865400E69CD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAE94CA2D4B269D0A994AB8C /* Pods-WavesCheck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -636,6 +710,7 @@
 		};
 		881FF4022831865400E69CD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1644D50DBF5C5D3D839955BC /* Pods-WavesCheck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
