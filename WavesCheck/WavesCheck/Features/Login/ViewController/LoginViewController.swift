@@ -32,18 +32,18 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginScreenProtocol {
     
     func actionSignInButton() {
-//        let vc: TabBarController = TabBarController()
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc: TabBarController = TabBarController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func actionRegisterButton() {
-//        let vc: SignUpViewController = SignUpViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc: RegisterViewController = RegisterViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func actionforgotPasswordButton() {
-//        let vc: PasswordChangeViewController = PasswordChangeViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc: PasswordChangeViewController = PasswordChangeViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

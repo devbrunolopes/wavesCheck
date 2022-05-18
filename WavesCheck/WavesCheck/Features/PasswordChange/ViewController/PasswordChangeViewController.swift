@@ -10,6 +10,7 @@ import UIKit
 class PasswordChangeViewController: UIViewController {
 
     var passwordChangeScreen: PasswordChangeScreen?
+    var alert: Alert?
     
     override func loadView() {
         passwordChangeScreen = PasswordChangeScreen()
@@ -20,6 +21,7 @@ class PasswordChangeViewController: UIViewController {
         super.viewDidLoad()
         passwordChangeScreen?.delegate(delegate: self)
         passwordChangeScreen?.configTextFieldDelegate(delegate: self)
+        alert = Alert(controller: self)
     }
 }
 
@@ -27,11 +29,11 @@ class PasswordChangeViewController: UIViewController {
 
 extension PasswordChangeViewController: PasswordChangeScreenProtocol {
     func backButtonAction() {
-        
+        navigationController?.popViewController(animated: true)
     }
     
     func changePasswordButtonAction() {
-        
+        alert?.configAlert(title: "Izzaaaa", message: "Email enviado com sucesso, verifique sua caixa de email/spam em instantes!")
     }
 }
 

@@ -10,6 +10,7 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     var registerScreen: RegisterScreen?
+    var alert: Alert?
     
     override func loadView() {
         registerScreen = RegisterScreen()
@@ -20,6 +21,7 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         registerScreen?.delegate(delegate: self)
         registerScreen?.configTextFieldDelegate(delegate: self)
+        alert = Alert(controller: self)
     }
 }
 
@@ -27,11 +29,11 @@ class RegisterViewController: UIViewController {
 
 extension RegisterViewController: RegisterScreenProtocol {
     func backButtonAction() {
-        
+        navigationController?.popViewController(animated: true)
     }
     
     func registerButtonAction() {
-        
+        alert?.configAlert(title: "Izaaa", message: "Cadastro realizado com sucesso")
     }
 }
 

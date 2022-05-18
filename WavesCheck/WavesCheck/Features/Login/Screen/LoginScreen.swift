@@ -109,7 +109,7 @@ class LoginScreen: UIView {
         configBackGround()
         addSubView()
         setUpConstraints()
-        enableButton(false)
+        enableButton(true)
     }
     
     required init?(coder: NSCoder) {
