@@ -18,6 +18,9 @@
 		881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4102831B2B500E69CD3 /* RegisterScreen.swift */; };
 		881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */; };
 		881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */; };
+		88614CB028350CAB00523FA0 /* FavoriteSpotsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CAF28350CAB00523FA0 /* FavoriteSpotsScreen.swift */; };
+		88614CB328350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CB228350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift */; };
+		88614CB628350D7300523FA0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CB528350D7300523FA0 /* File.swift */; };
 		88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC5612832654A003E5DE5 /* TabBarController.swift */; };
 		88DEC56828326665003E5DE5 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56728326665003E5DE5 /* ForecastViewController.swift */; };
 		88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */; };
@@ -45,6 +48,9 @@
 		881FF4102831B2B500E69CD3 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreen.swift; sourceTree = "<group>"; };
 		881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
+		88614CAF28350CAB00523FA0 /* FavoriteSpotsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsScreen.swift; sourceTree = "<group>"; };
+		88614CB228350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsTableViewCell.swift; sourceTree = "<group>"; };
+		88614CB528350D7300523FA0 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		88DEC5612832654A003E5DE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		88DEC56728326665003E5DE5 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +195,30 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		88614CAE28350C6B00523FA0 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				88614CAF28350CAB00523FA0 /* FavoriteSpotsScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		88614CB128350D0F00523FA0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				88614CB228350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		88614CB428350D5A00523FA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88614CB528350D7300523FA0 /* File.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		88DEC56028326504003E5DE5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +252,9 @@
 		88DEC56528326633003E5DE5 /* FavoriteSpots */ = {
 			isa = PBXGroup;
 			children = (
+				88614CB428350D5A00523FA0 /* Model */,
+				88614CB128350D0F00523FA0 /* Cell */,
+				88614CAE28350C6B00523FA0 /* Screen */,
 				88DEC56B2832667D003E5DE5 /* ViewController */,
 			);
 			path = FavoriteSpots;
@@ -391,6 +424,7 @@
 				881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */,
 				881FF3F02831865300E69CD3 /* AppDelegate.swift in Sources */,
 				88DEC58428327D0C003E5DE5 /* Report.swift in Sources */,
+				88614CB628350D7300523FA0 /* File.swift in Sources */,
 				88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */,
 				88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */,
 				88DEC58128327C70003E5DE5 /* ReportsTableViewCell.swift in Sources */,
@@ -398,12 +432,14 @@
 				881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */,
 				881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */,
 				881FF40F2831B2A800E69CD3 /* RegisterViewController.swift in Sources */,
+				88614CB028350CAB00523FA0 /* FavoriteSpotsScreen.swift in Sources */,
 				88DEC57B28327396003E5DE5 /* NearLocation.swift in Sources */,
 				881FF40A2831884C00E69CD3 /* LoginViewController.swift in Sources */,
 				88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */,
 				881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */,
 				881FF3F22831865300E69CD3 /* SceneDelegate.swift in Sources */,
 				88DEC56828326665003E5DE5 /* ForecastViewController.swift in Sources */,
+				88614CB328350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift in Sources */,
 				88DEC57528326BF9003E5DE5 /* ForecastScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
