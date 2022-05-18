@@ -11,6 +11,7 @@ protocol ProfileScreenProtocol: AnyObject {
     func editPictureButtonAction()
     func changePasswordButtonAction()
     func saveButtonAction()
+    func logOutButtonAction()
 }
 
 class ProfileScreen: UIView {
@@ -39,7 +40,7 @@ class ProfileScreen: UIView {
         button.setTitle("Editar foto", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         button.setTitleColor(UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0), for: .normal)
-        button.addTarget(self, action: #selector(self.didTapChangePasswordButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapChangePasswordButton), for: .touchUpInside)
         return button
     }()
     
@@ -138,7 +139,7 @@ class ProfileScreen: UIView {
         button.setTitle("Alterar Senha", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         button.setTitleColor(UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0), for: .normal)
-        button.addTarget(self, action: #selector(self.didTapChangePasswordButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapChangePasswordButton), for: .touchUpInside)
         return button
     }()
     
@@ -148,10 +149,23 @@ class ProfileScreen: UIView {
         button.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         button.layer.cornerRadius = 7
         button.clipsToBounds = true
-        button.setTitle("Alterar Senha", for: .normal)
+        button.setTitle("Salvar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(self.didTapSaveButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var logOutButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 7
+        button.clipsToBounds = true
+        button.setTitle("Sair", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        button.setTitleColor(UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1.0), for: .normal)
+        button.addTarget(self, action: #selector(didTapLogOutButton), for: .touchUpInside)
         return button
     }()
     
@@ -182,6 +196,10 @@ class ProfileScreen: UIView {
         delegate?.saveButtonAction()
     }
     
+    @objc private func didTapLogOutButton() {
+        delegate?.logOutButtonAction()
+    }
+    
     //MARK: - Public Functions
     
     public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
@@ -208,6 +226,7 @@ class ProfileScreen: UIView {
         addSubview(genderTextField)
         addSubview(changePasswordButton)
         addSubview(saveButton)
+        addSubview(logOutButton)
     }
     
     private func setUpConstraints() {
@@ -252,15 +271,20 @@ class ProfileScreen: UIView {
             genderTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             genderTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             
-            changePasswordButton.topAnchor.constraint(equalTo: genderTextField.bottomAnchor, constant: 15),
+            changePasswordButton.topAnchor.constraint(equalTo: genderTextField.bottomAnchor, constant: 20),
             changePasswordButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             changePasswordButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
-            changePasswordButton.heightAnchor.constraint(equalToConstant: 30),
+            changePasswordButton.heightAnchor.constraint(equalToConstant: 20),
             
-            saveButton.topAnchor.constraint(equalTo: changePasswordButton.bottomAnchor, constant: 20),
+            saveButton.topAnchor.constraint(equalTo: changePasswordButton.bottomAnchor, constant: 15),
             saveButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             saveButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
-            saveButton.heightAnchor.constraint(equalToConstant: 50)
+            saveButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            logOutButton.topAnchor.constraint(equalTo: saveButton.bottomAnchor, constant: 15),
+            logOutButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            logOutButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
+            logOutButton.heightAnchor.constraint(equalToConstant: 20)
             
         ])
     }

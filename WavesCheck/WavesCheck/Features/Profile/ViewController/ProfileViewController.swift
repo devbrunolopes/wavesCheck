@@ -26,6 +26,10 @@ class ProfileViewController: UIViewController {
 //MARK: - ProfileScreenProtocol
 
 extension ProfileViewController: ProfileScreenProtocol {
+    func logOutButtonAction() {
+        
+    }
+    
     func editPictureButtonAction() {
         
     }
