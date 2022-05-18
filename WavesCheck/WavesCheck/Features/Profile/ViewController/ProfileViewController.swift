@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
         profileScreen?.configTextFieldDelegate(delegate: self)
         profileScreen?.delegate(delegate: self)
     }
+    
 }
 
 //MARK: - ProfileScreenProtocol

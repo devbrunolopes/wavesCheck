@@ -26,8 +26,10 @@ class ProfileScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "eu")
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         image.layer.cornerRadius = 50
+        image.layer.masksToBounds = false
+        image.clipsToBounds = true
         return image
     }()
     
@@ -233,12 +235,11 @@ class ProfileScreen: UIView {
         NSLayoutConstraint.activate([
                     
             logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            logoAppImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            logoAppImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
+            logoAppImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             logoAppImageView.heightAnchor.constraint(equalToConstant: 100),
             logoAppImageView.widthAnchor.constraint(equalToConstant: 100),
             
-            editPictureButton.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 20),
+            editPictureButton.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 10),
             editPictureButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             editPictureButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             editPictureButton.heightAnchor.constraint(equalToConstant: 30),
