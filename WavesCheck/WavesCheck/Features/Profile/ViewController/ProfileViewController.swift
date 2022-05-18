@@ -9,10 +9,14 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    var profileScreen: ProfileScreen?
+    
+    override func loadView() {
+        self.profileScreen = ProfileScreen()
+        self.view = self.profileScreen
     }
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
