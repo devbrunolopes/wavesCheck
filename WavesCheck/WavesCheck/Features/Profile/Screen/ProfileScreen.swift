@@ -7,7 +7,19 @@
 
 import UIKit
 
+protocol ProfileScreenProtocol: AnyObject {
+    func editPictureButtonAction()
+    func changePasswordButtonAction()
+    func saveButtonAction()
+}
+
 class ProfileScreen: UIView {
+    
+    weak private var delegate: ProfileScreenProtocol?
+    
+    func delegate(delegate: ProfileScreenProtocol?) {
+        self.delegate = delegate
+    }
 
     lazy var logoAppImageView: UIImageView = {
         let image = UIImageView()
@@ -159,15 +171,23 @@ class ProfileScreen: UIView {
     //MARK: - Objc Functions
     
     @objc private func didTapEditPictureButton() {
-//        self.delegate?.actionEditPictureButton()
+        delegate?.editPictureButtonAction()
     }
     
     @objc private func didTapChangePasswordButton() {
-//        self.delegate?.actionChangePasswordButton()
+        delegate?.changePasswordButtonAction()
     }
     
     @objc private func didTapSaveButton() {
-//        self.delegate?.actionSaveButton()
+        delegate?.saveButtonAction()
+    }
+    
+    //MARK: - Public Functions
+    
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        nameTextField.delegate = delegate
+        birthdayTextField.delegate = delegate
+        genderTextField.delegate = delegate
     }
     
     //MARK: - Private Functions
