@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		881FF3F02831865300E69CD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF3EF2831865300E69CD3 /* AppDelegate.swift */; };
 		881FF3F22831865300E69CD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF3F12831865300E69CD3 /* SceneDelegate.swift */; };
-		881FF3F42831865300E69CD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF3F32831865300E69CD3 /* ViewController.swift */; };
 		881FF3F92831865400E69CD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881FF3F82831865400E69CD3 /* Assets.xcassets */; };
 		881FF3FC2831865400E69CD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881FF3FA2831865400E69CD3 /* LaunchScreen.storyboard */; };
 		881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4072831883A00E69CD3 /* LoginScreen.swift */; };
@@ -44,7 +43,6 @@
 		881FF3EC2831865300E69CD3 /* WavesCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WavesCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		881FF3EF2831865300E69CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		881FF3F12831865300E69CD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		881FF3F32831865300E69CD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		881FF3F82831865400E69CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		881FF3FB2831865400E69CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		881FF3FD2831865400E69CD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				AAE94CA2D4B269D0A994AB8C /* Pods-WavesCheck.debug.xcconfig */,
 				1644D50DBF5C5D3D839955BC /* Pods-WavesCheck.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -129,7 +126,6 @@
 				88614CBA2835162B00523FA0 /* Commons */,
 				881FF3EF2831865300E69CD3 /* AppDelegate.swift */,
 				881FF3F12831865300E69CD3 /* SceneDelegate.swift */,
-				881FF3F32831865300E69CD3 /* ViewController.swift */,
 				881FF3F82831865400E69CD3 /* Assets.xcassets */,
 				881FF3FA2831865400E69CD3 /* LaunchScreen.storyboard */,
 				881FF3FD2831865400E69CD3 /* Info.plist */,
@@ -524,7 +520,6 @@
 				88614CBD2835165700523FA0 /* Alert.swift in Sources */,
 				88DEC57828327375003E5DE5 /* NearLocationsTableViewCell.swift in Sources */,
 				88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */,
-				881FF3F42831865300E69CD3 /* ViewController.swift in Sources */,
 				881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */,
 				881FF3F02831865300E69CD3 /* AppDelegate.swift in Sources */,
 				88DEC58428327D0C003E5DE5 /* Report.swift in Sources */,
