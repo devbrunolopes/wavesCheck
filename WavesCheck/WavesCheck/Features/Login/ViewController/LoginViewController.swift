@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
     var loginScreen: LoginScreen?
+    var alert: Alert?
+    var auth: Auth?
     
     override func loadView() {
         loginScreen = LoginScreen()
@@ -20,6 +23,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         loginScreen?.delegate(delegate: self)
         loginScreen?.configTextFieldDelegate(delegate: self)
+        auth = Auth.auth()
+        alert = Alert(controller: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,8 +37,21 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginScreenProtocol {
     
     func actionSignInButton() {
-        let vc: TabBarController = TabBarController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        guard let login = loginScreen else {return}
+        
+        auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { user, error in
+            
+            if error != nil {
+                self.alert?.configAlert(title: "Ops", message: "Email e/ou senha incorretos!")
+            } else {
+                if user == nil {
+                    self.alert?.configAlert(title: "Ops", message: "O servidor tomou uma vaca, tente novamente na próxima série!")
+                } else {
+                    let vc: TabBarController = TabBarController()
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+        })
     }
     
     func actionRegisterButton() {

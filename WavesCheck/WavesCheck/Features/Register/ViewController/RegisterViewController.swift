@@ -36,12 +36,9 @@ extension RegisterViewController: RegisterScreenProtocol {
     }
     
     func registerButtonAction() {
-        alert?.configAlert(title: "Izaaa", message: "Cadastro realizado com sucesso")
+        guard let register = registerScreen else {return}
         
-        let email: String = registerScreen?.emailTextField.text ?? ""
-        let password: String = registerScreen?.passwordTextField.text ?? ""
-        
-        auth?.createUser(withEmail: email, password: password, completion: { success, error in
+        auth?.createUser(withEmail: register.getEmail(), password: register.getPassword(), completion: { success, error in
             
             if error != nil {
                 print(error ?? "Erro ao cadastrar")
@@ -50,7 +47,6 @@ extension RegisterViewController: RegisterScreenProtocol {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         })
-        
     }
 }
 

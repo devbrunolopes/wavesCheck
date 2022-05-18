@@ -50,6 +50,7 @@ class LoginScreen: UIView {
         textField.keyboardType = .emailAddress
         textField.placeholder = "Digite seu email"
         textField.textColor = .darkGray
+        textField.autocapitalizationType = .none
         return textField
     }()
     
@@ -65,6 +66,8 @@ class LoginScreen: UIView {
         textField.keyboardType = .default
         textField.placeholder = "Digite a sua senha"
         textField.textColor = .darkGray
+        textField.autocapitalizationType = .none
+        textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -145,6 +148,16 @@ class LoginScreen: UIView {
         }
     }
     
+    public func getEmail() -> String {
+        return emailTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return passwordTextField.text ?? ""
+    }
+    
+    //MARK: - Private Functions
+    
     private func enableButton(_ enable: Bool) {
         if enable {
             signInButton.isEnabled = true
@@ -154,9 +167,6 @@ class LoginScreen: UIView {
             signInButton.setTitleColor(.lightGray, for: .normal)
         }
     }
-
-    
-    //MARK: - Private Functions
     
     private func configBackGround() {
         backgroundColor = .white

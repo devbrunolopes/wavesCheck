@@ -138,6 +138,14 @@ class RegisterScreen: UIView {
         }
     }
     
+    public func getEmail() -> String {
+        return emailTextField.text ?? "" 
+    }
+    
+    public func getPassword() -> String {
+        return passwordTextField.text ?? ""
+    }
+    
     //MARK: - Private Functions
     
     private func configBackGround() {
