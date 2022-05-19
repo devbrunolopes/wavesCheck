@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
 
     var profileScreen: ProfileScreen?
+    var auth: Auth?
+    var alert: Alert?
     
     override func loadView() {
         profileScreen = ProfileScreen()
@@ -20,6 +23,8 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         profileScreen?.configTextFieldDelegate(delegate: self)
         profileScreen?.delegate(delegate: self)
+        auth = Auth.auth()
+        alert = Alert(controller: self)
     }
     
 }
@@ -27,10 +32,6 @@ class ProfileViewController: UIViewController {
 //MARK: - ProfileScreenProtocol
 
 extension ProfileViewController: ProfileScreenProtocol {
-    func logOutButtonAction() {
-        
-    }
-    
     func editPictureButtonAction() {
         
     }
@@ -41,6 +42,16 @@ extension ProfileViewController: ProfileScreenProtocol {
     
     func saveButtonAction() {
         
+    }
+    
+    func logOutButtonAction() {
+        do {
+            try auth?.signOut()
+            let vc: LoginViewController = LoginViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        } catch let signOutError {
+            alert?.configAlert(title: "Ops", message: signOutError.localizedDescription)
+        }
     }
 }
 
