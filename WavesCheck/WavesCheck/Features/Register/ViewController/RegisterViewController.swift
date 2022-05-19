@@ -43,7 +43,7 @@ extension RegisterViewController: RegisterScreenProtocol {
             if error != nil {
                 print(error ?? "Erro ao cadastrar")
             } else {
-                let vc: ProfileViewController = ProfileViewController()
+                let vc: TabBarController = TabBarController()
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         })
