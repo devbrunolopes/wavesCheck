@@ -10,5 +10,6 @@ target 'WavesCheck' do
 pod 'FirebaseAuth'
 pod 'Firebase/Core'
 pod 'FirebaseFirestore'
+pod 'Firebase/Database'
 
 end
