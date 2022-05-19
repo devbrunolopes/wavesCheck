@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class PasswordChangeViewController: UIViewController {
 
     var passwordChangeScreen: PasswordChangeScreen?
     var alert: Alert?
+    var auth: Auth?
     
     override func loadView() {
         passwordChangeScreen = PasswordChangeScreen()
@@ -22,6 +24,7 @@ class PasswordChangeViewController: UIViewController {
         passwordChangeScreen?.delegate(delegate: self)
         passwordChangeScreen?.configTextFieldDelegate(delegate: self)
         alert = Alert(controller: self)
+        auth = Auth.auth()
     }
 }
 
@@ -33,7 +36,15 @@ extension PasswordChangeViewController: PasswordChangeScreenProtocol {
     }
     
     func changePasswordButtonAction() {
-        alert?.configAlert(title: "Izzaaaa", message: "Email enviado com sucesso, verifique sua caixa de email/spam em instantes!")
+        
+        auth?.sendPasswordReset(withEmail: passwordChangeScreen?.emailTextField.text ?? "", completion: { error in
+            if let error = error {
+                self.alert?.configAlert(title: "Ops", message: error.localizedDescription)
+            }
+            
+            self.alert?.configAlert(title: "Izzaaaa", message: "Email enviado com sucesso, verifique sua caixa de email/spam em instantes!")
+            
+        })
     }
 }
 

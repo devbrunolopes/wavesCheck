@@ -60,6 +60,7 @@ class PasswordChangeScreen: UIView {
         textField.keyboardType = .emailAddress
         textField.placeholder = "Digite seu email"
         textField.textColor = .darkGray
+        textField.autocapitalizationType = .none
         return textField
     }()
     
