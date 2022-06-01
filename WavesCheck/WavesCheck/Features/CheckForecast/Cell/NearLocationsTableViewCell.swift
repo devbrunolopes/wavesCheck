@@ -7,9 +7,19 @@
 
 import UIKit
 
+protocol NearLocationsTableViewCellProtocol: AnyObject {
+    func goButtonAction()
+}
+
 class NearLocationsTableViewCell: UITableViewCell {
 
     static let identifier: String = "NearLocationsTableViewCell"
+    
+    weak private var delegate: NearLocationsTableViewCellProtocol?
+    
+    func delegate(delegate: NearLocationsTableViewCellProtocol) {
+        self.delegate = delegate
+    }
     
     lazy var nearLocationLabel: UILabel = {
         let label = UILabel()
@@ -47,7 +57,7 @@ class NearLocationsTableViewCell: UITableViewCell {
     //MARK: - OBJC Functions
     
     @objc private func didTapGoButton(){
-        
+        delegate?.goButtonAction()
     }
     
     //MARK: - Public Functions

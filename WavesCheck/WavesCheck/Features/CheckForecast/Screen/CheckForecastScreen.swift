@@ -21,7 +21,6 @@ class CheckForecastScreen: UIView {
         self.delegate = delegate
     }
 
-
     lazy var selfLocationButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -83,7 +82,6 @@ class CheckForecastScreen: UIView {
         configBackGround()
         addSubView()
         setUpConstraints()
-        
     }
     
     required init?(coder: NSCoder) {
