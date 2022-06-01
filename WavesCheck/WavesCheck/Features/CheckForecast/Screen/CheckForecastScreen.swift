@@ -8,7 +8,19 @@
 import UIKit
 import MapKit
 
+protocol CheckForecastScreenProtocol: AnyObject {
+    func selfLocationButtonAction()
+    func searchButtonAction()
+}
+
 class CheckForecastScreen: UIView {
+    
+    weak private var delegate: CheckForecastScreenProtocol?
+    
+    public func delegate(delegate: CheckForecastScreenProtocol) {
+        self.delegate = delegate
+    }
+
 
     lazy var selfLocationButton: UIButton = {
         let button = UIButton()
@@ -81,9 +93,11 @@ class CheckForecastScreen: UIView {
     //MARK: - @OBJC Functions
     
     @objc private func didTapSelfLocationButton(){
+        delegate?.selfLocationButtonAction()
     }
     
     @objc private func didTapSearchButton(){
+        delegate?.searchButtonAction()
     }
     
     //MARK: - Public Functions
@@ -124,5 +138,4 @@ class CheckForecastScreen: UIView {
             
         ])
     }
-
 }
