@@ -15,7 +15,7 @@ class TabBarController: UITabBarController {
     }
     
     private func setUpTabBar() {
-        let item01 = ForecastViewController()
+        let item01 = CheckForecastViewController()
         let item02 = ReportsViewController()
         let item03 = FavoriteSpotsViewController()
         let item04 = ProfileViewController()

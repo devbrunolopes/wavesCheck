@@ -24,11 +24,11 @@
 		88614CBD2835165700523FA0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CBC2835165700523FA0 /* Alert.swift */; };
 		88614CBF28353B1700523FA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88614CBE28353B1700523FA0 /* GoogleService-Info.plist */; };
 		88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC5612832654A003E5DE5 /* TabBarController.swift */; };
-		88DEC56828326665003E5DE5 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56728326665003E5DE5 /* ForecastViewController.swift */; };
+		88DEC56828326665003E5DE5 /* CheckForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */; };
 		88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */; };
 		88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56F283266DB003E5DE5 /* FavoriteSpotsViewController.swift */; };
 		88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC571283266EE003E5DE5 /* ProfileViewController.swift */; };
-		88DEC57528326BF9003E5DE5 /* ForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */; };
+		88DEC57528326BF9003E5DE5 /* CheckForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57428326BF9003E5DE5 /* CheckForecastScreen.swift */; };
 		88DEC57828327375003E5DE5 /* NearLocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57728327375003E5DE5 /* NearLocationsTableViewCell.swift */; };
 		88DEC57B28327396003E5DE5 /* NearLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57A28327396003E5DE5 /* NearLocation.swift */; };
 		88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57D28327B3A003E5DE5 /* ReportsScreen.swift */; };
@@ -59,11 +59,11 @@
 		88614CBC2835165700523FA0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		88614CBE28353B1700523FA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88DEC5612832654A003E5DE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		88DEC56728326665003E5DE5 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForecastViewController.swift; sourceTree = "<group>"; };
 		88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		88DEC56F283266DB003E5DE5 /* FavoriteSpotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsViewController.swift; sourceTree = "<group>"; };
 		88DEC571283266EE003E5DE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastScreen.swift; sourceTree = "<group>"; };
+		88DEC57428326BF9003E5DE5 /* CheckForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForecastScreen.swift; sourceTree = "<group>"; };
 		88DEC57728327375003E5DE5 /* NearLocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearLocationsTableViewCell.swift; sourceTree = "<group>"; };
 		88DEC57A28327396003E5DE5 /* NearLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearLocation.swift; sourceTree = "<group>"; };
 		88DEC57D28327B3A003E5DE5 /* ReportsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsScreen.swift; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 				88DEC5662832663E003E5DE5 /* Profile */,
 				88DEC56528326633003E5DE5 /* FavoriteSpots */,
 				88DEC5642832662C003E5DE5 /* Reports */,
-				88DEC5632832661F003E5DE5 /* Forecast */,
+				88DEC5632832661F003E5DE5 /* CheckForecast */,
 				88DEC56028326504003E5DE5 /* TabBar */,
 				881FF4122831B82800E69CD3 /* PasswordChange */,
 				881FF40B2831B28200E69CD3 /* Register */,
@@ -280,7 +280,7 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		88DEC5632832661F003E5DE5 /* Forecast */ = {
+		88DEC5632832661F003E5DE5 /* CheckForecast */ = {
 			isa = PBXGroup;
 			children = (
 				88DEC5792832738A003E5DE5 /* Model */,
@@ -288,7 +288,7 @@
 				88DEC57328326BAE003E5DE5 /* Screen */,
 				88DEC56928326669003E5DE5 /* ViewController */,
 			);
-			path = Forecast;
+			path = CheckForecast;
 			sourceTree = "<group>";
 		};
 		88DEC5642832662C003E5DE5 /* Reports */ = {
@@ -325,7 +325,7 @@
 		88DEC56928326669003E5DE5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				88DEC56728326665003E5DE5 /* ForecastViewController.swift */,
+				88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -357,7 +357,7 @@
 		88DEC57328326BAE003E5DE5 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				88DEC57428326BF9003E5DE5 /* ForecastScreen.swift */,
+				88DEC57428326BF9003E5DE5 /* CheckForecastScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -538,9 +538,9 @@
 				88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */,
 				881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */,
 				881FF3F22831865300E69CD3 /* SceneDelegate.swift in Sources */,
-				88DEC56828326665003E5DE5 /* ForecastViewController.swift in Sources */,
+				88DEC56828326665003E5DE5 /* CheckForecastViewController.swift in Sources */,
 				88614CB328350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift in Sources */,
-				88DEC57528326BF9003E5DE5 /* ForecastScreen.swift in Sources */,
+				88DEC57528326BF9003E5DE5 /* CheckForecastScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class ForecastScreen: UIView {
+class CheckForecastScreen: UIView {
 
     lazy var selfLocationButton: UIButton = {
         let button = UIButton()

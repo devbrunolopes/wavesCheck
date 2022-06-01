@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ForecastViewController: UIViewController {
+class CheckForecastViewController: UIViewController {
 
-    var forecastScreen: ForecastScreen?
+    var forecastScreen: CheckForecastScreen?
     
     var nearLocation: [NearLocation] = [
         NearLocation(locationName: "Praia da Macumba"),
@@ -18,7 +18,7 @@ class ForecastViewController: UIViewController {
     ]
     
     override func loadView() {
-        forecastScreen = ForecastScreen()
+        forecastScreen = CheckForecastScreen()
         view = forecastScreen
     }
     
@@ -30,7 +30,7 @@ class ForecastViewController: UIViewController {
 
 //MARK: - TableView Delegate e DataSource
 
-extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
+extension CheckForecastViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.nearLocation.count
