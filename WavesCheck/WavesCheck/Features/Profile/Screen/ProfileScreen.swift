@@ -22,7 +22,7 @@ class ProfileScreen: UIView {
         self.delegate = delegate
     }
 
-    lazy var logoAppImageView: UIImageView = {
+    lazy var userImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "eu")
@@ -42,7 +42,7 @@ class ProfileScreen: UIView {
         button.setTitle("Editar foto", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         button.setTitleColor(UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0), for: .normal)
-        button.addTarget(self, action: #selector(didTapChangePasswordButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapEditPictureButton), for: .touchUpInside)
         return button
     }()
     
@@ -217,7 +217,7 @@ class ProfileScreen: UIView {
     }
     
     private func addSubView() {
-        addSubview(logoAppImageView)
+        addSubview(userImageView)
         addSubview(personalDataLabel)
         addSubview(editPictureButton)
         addSubview(nameLabel)
@@ -234,12 +234,12 @@ class ProfileScreen: UIView {
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
                     
-            logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            logoAppImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            logoAppImageView.heightAnchor.constraint(equalToConstant: 100),
-            logoAppImageView.widthAnchor.constraint(equalToConstant: 100),
+            userImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            userImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            userImageView.heightAnchor.constraint(equalToConstant: 100),
+            userImageView.widthAnchor.constraint(equalToConstant: 100),
             
-            editPictureButton.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 10),
+            editPictureButton.topAnchor.constraint(equalTo: userImageView.bottomAnchor, constant: 10),
             editPictureButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             editPictureButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             editPictureButton.heightAnchor.constraint(equalToConstant: 30),

@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController {
     var profileScreen: ProfileScreen?
     var auth: Auth?
     var alert: Alert?
+    let pickerController = UIImagePickerController()
     
     override func loadView() {
         profileScreen = ProfileScreen()
@@ -23,17 +24,23 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         profileScreen?.configTextFieldDelegate(delegate: self)
         profileScreen?.delegate(delegate: self)
+        pickerController.delegate = self
         auth = Auth.auth()
         alert = Alert(controller: self)
     }
     
+    private func addPicture() {
+        pickerController.allowsEditing = false
+        pickerController.sourceType = .photoLibrary
+        present(pickerController, animated: true, completion: nil)
+    }
 }
 
 //MARK: - ProfileScreenProtocol
 
 extension ProfileViewController: ProfileScreenProtocol {
     func editPictureButtonAction() {
-        
+        addPicture()
     }
     
     func changePasswordButtonAction() {
@@ -52,6 +59,26 @@ extension ProfileViewController: ProfileScreenProtocol {
         } catch let signOutError {
             alert?.configAlert(title: "Ops", message: signOutError.localizedDescription)
         }
+    }
+}
+
+//MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            profileScreen?.userImageView.image = pickedImage
+            profileScreen?.userImageView.clipsToBounds = true
+            profileScreen?.userImageView.contentMode = .scaleAspectFill
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
