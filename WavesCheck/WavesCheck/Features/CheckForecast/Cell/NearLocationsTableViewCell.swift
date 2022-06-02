@@ -85,5 +85,4 @@ class NearLocationsTableViewCell: UITableViewCell {
             
         ])
     }
-
 }

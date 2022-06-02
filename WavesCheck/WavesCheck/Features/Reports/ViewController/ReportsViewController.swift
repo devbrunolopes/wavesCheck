@@ -6,19 +6,16 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseCoreInternal
 
 class ReportsViewController: UIViewController {
 
     var reportsScreen: ReportsScreen?
+//    var addReportsViewController: AddReportsViewController?
+    let database = Firestore.firestore()
     
-    var report: [Report] = [
-        Report(locationName: "Canto do Recreio, RJ", image: UIImage(named: "surfer") ?? UIImage(), size: "Tamanho: 0.5+", condition: "Condição: Tem uma vala"),
-        Report(locationName: "Grumari, RJ", image: UIImage(named: "surf") ?? UIImage(), size: "Tamanho: 0.3", condition: "Condição: Tá osso"),
-        Report(locationName: "Praia do Tombo, SP", image: UIImage(named: "surf1") ?? UIImage(), size: "Tamanho: 1.5+", condition: "Condição: Altas ondas"),
-        Report(locationName: "Maresias, SP", image: UIImage(named: "surf2") ?? UIImage(), size: "Tamanho: 0.5", condition: "Condição: Vale a queda"),
-        Report(locationName: "Stella Maris, BA", image: UIImage(named: "surf3") ?? UIImage(), size: "Tamanho: 1.5", condition: "Condição: Mexido demais"),
-        Report(locationName: "Pitangueiras, SP", image: UIImage(named: "surf4") ?? UIImage(), size: "Tamanho: 1.0", condition: "Condição: Tem uma vala"),
-    ]
+    var report: [Report] = []
     
     override func loadView() {
         reportsScreen = ReportsScreen()

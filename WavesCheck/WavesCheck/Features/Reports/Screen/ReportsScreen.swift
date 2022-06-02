@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol ReportsScreenProtocol: AnyObject {
+    func addReportAction()
+    func getData()
+}
+
 class ReportsScreen: UIView {
+    
+    weak private var delegate: ReportsScreenProtocol?
+    
+    func delegate(delegate: ReportsScreenProtocol?) {
+        self.delegate = delegate
+    }
 
     lazy var reportsLabel: UILabel = {
         let label = UILabel()
@@ -53,7 +64,8 @@ class ReportsScreen: UIView {
     //MARK: - OBJC Functions
     
     @objc private func didTapAddReport() {
-        
+        delegate?.addReportAction()
+        delegate?.getData()
     }
     
     //MARK: - Public Functions

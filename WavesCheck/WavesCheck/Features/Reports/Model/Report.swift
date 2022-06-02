@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-struct Report {
+struct Report: Identifiable {
+    var id: String
     var locationName: String
     var image: UIImage
     var size: String

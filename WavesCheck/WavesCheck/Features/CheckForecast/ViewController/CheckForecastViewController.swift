@@ -28,6 +28,7 @@ class CheckForecastViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForecastScreen?.configTableViewProtocols(delegate: self, dataSource: self)
+        checkForecastScreen?.delegate(delegate: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,6 +37,16 @@ class CheckForecastViewController: UIViewController {
         manager.requestWhenInUseAuthorization()
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.startUpdatingLocation()
+    }
+}
+
+//MARK: - NearLocationsTableViewCellProtocol
+
+extension CheckForecastViewController: NearLocationsTableViewCellProtocol {
+    func goButtonAction() {
+        print(#function)
+        let vc: ForecastViewController = ForecastViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -105,6 +116,7 @@ extension CheckForecastViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NearLocationsTableViewCell.identifier, for: indexPath) as? NearLocationsTableViewCell
         cell?.setUpCell(nearLocation: self.nearLocation[indexPath.row])
+        cell?.delegate(delegate: self)
         return cell ?? UITableViewCell()
     }
     
