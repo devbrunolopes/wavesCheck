@@ -10,8 +10,8 @@ import UIKit
 
 struct Report: Identifiable {
     var id: String
-    var locationName: String
-    var image: UIImage
-    var size: String
-    var condition: String
+    var nameLocation: String
+    var wavesSize: String
+    var surfCondition: String
+    var surfImage: String
 }

@@ -69,10 +69,14 @@ class ReportsTableViewCell: UITableViewCell {
     //MARK: - Public Functions
     
     public func setUpCell(report: Report) {
-        locationLabel.text = report.locationName
-        locationImageView.image = report.image
-        sizeLabel.text = report.size
-        conditionLabel.text = report.condition
+        locationLabel.text = "Local: \(report.nameLocation)"
+        sizeLabel.text = "Tamanho: \(report.wavesSize)"
+        conditionLabel.text = "Condição: \(report.surfCondition)"
+        
+        let url = URL(string: report.surfImage) ?? URL(fileURLWithPath: "")
+        if let data = try? Data(contentsOf: url) {
+            self.locationImageView.image = UIImage(data: data)
+        }
     }
 
     //MARK: - Private Functions
@@ -89,7 +93,6 @@ class ReportsTableViewCell: UITableViewCell {
         selectionStyle = .none
         backgroundColor = .white
         clipsToBounds = true
-//        layer.cornerRadius = 7
         layer.borderWidth = 1.0
         layer.borderColor = CGColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
     }

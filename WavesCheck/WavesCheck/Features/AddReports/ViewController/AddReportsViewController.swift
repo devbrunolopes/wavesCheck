@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
+import FirebaseAuth
+import FirebaseFirestore
 
 class AddReportsViewController: UIViewController {
 
@@ -82,7 +86,6 @@ extension AddReportsViewController: AddReportsScreenProtocol {
         print(#function)
         saveImageReport()
         saveReport(nameLocation: addReportsScreen?.locationTextField.text ?? "", wavesSize: addReportsScreen?.wavesSizeTextField.text ?? "", surfCondition: addReportsScreen?.surfConditionTextField.text ?? "", image: imageURL)
-//        delegate?.retrievePicturesToReports()
     }
 }
 
