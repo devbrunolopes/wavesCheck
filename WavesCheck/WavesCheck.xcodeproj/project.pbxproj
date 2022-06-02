@@ -17,6 +17,11 @@
 		881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4102831B2B500E69CD3 /* RegisterScreen.swift */; };
 		881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */; };
 		881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */; };
+		885641D028483CBD00C6C96B /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641CF28483CBD00C6C96B /* ForecastViewController.swift */; };
+		885641D228483CF400C6C96B /* ForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641D128483CF400C6C96B /* ForecastScreen.swift */; };
+		885641D428483D4500C6C96B /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641D328483D4500C6C96B /* ForecastTableViewCell.swift */; };
+		885641D628483D7D00C6C96B /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641D528483D7D00C6C96B /* Forecast.swift */; };
+		885641D828483D9D00C6C96B /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641D728483D9D00C6C96B /* ForecastViewModel.swift */; };
 		88614CB028350CAB00523FA0 /* FavoriteSpotsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CAF28350CAB00523FA0 /* FavoriteSpotsScreen.swift */; };
 		88614CB328350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CB228350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift */; };
 		88614CB628350D7300523FA0 /* LocationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CB528350D7300523FA0 /* LocationName.swift */; };
@@ -52,6 +57,11 @@
 		881FF4102831B2B500E69CD3 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreen.swift; sourceTree = "<group>"; };
 		881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
+		885641CF28483CBD00C6C96B /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		885641D128483CF400C6C96B /* ForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastScreen.swift; sourceTree = "<group>"; };
+		885641D328483D4500C6C96B /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		885641D528483D7D00C6C96B /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		885641D728483D9D00C6C96B /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		88614CAF28350CAB00523FA0 /* FavoriteSpotsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsScreen.swift; sourceTree = "<group>"; };
 		88614CB228350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsTableViewCell.swift; sourceTree = "<group>"; };
 		88614CB528350D7300523FA0 /* LocationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationName.swift; sourceTree = "<group>"; };
@@ -140,6 +150,7 @@
 				88DEC5662832663E003E5DE5 /* Profile */,
 				88DEC56528326633003E5DE5 /* FavoriteSpots */,
 				88DEC5642832662C003E5DE5 /* Reports */,
+				885641C928483C6A00C6C96B /* Forecast */,
 				88DEC5632832661F003E5DE5 /* CheckForecast */,
 				88DEC56028326504003E5DE5 /* TabBar */,
 				881FF4122831B82800E69CD3 /* PasswordChange */,
@@ -222,6 +233,58 @@
 				881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		885641C928483C6A00C6C96B /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				885641CE28483CA200C6C96B /* ViewModel */,
+				885641CD28483C9B00C6C96B /* Model */,
+				885641CC28483C9300C6C96B /* Cell */,
+				885641CB28483C8A00C6C96B /* Screen */,
+				885641CA28483C7D00C6C96B /* ViewController */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		885641CA28483C7D00C6C96B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				885641CF28483CBD00C6C96B /* ForecastViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		885641CB28483C8A00C6C96B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				885641D128483CF400C6C96B /* ForecastScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		885641CC28483C9300C6C96B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				885641D328483D4500C6C96B /* ForecastTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		885641CD28483C9B00C6C96B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				885641D528483D7D00C6C96B /* Forecast.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		885641CE28483CA200C6C96B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				885641D728483D9D00C6C96B /* ForecastViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		88614CAE28350C6B00523FA0 /* Screen */ = {
@@ -519,6 +582,7 @@
 			files = (
 				88614CBD2835165700523FA0 /* Alert.swift in Sources */,
 				88DEC57828327375003E5DE5 /* NearLocationsTableViewCell.swift in Sources */,
+				885641D028483CBD00C6C96B /* ForecastViewController.swift in Sources */,
 				88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */,
 				881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */,
 				881FF3F02831865300E69CD3 /* AppDelegate.swift in Sources */,
@@ -530,15 +594,19 @@
 				88DEC58128327C70003E5DE5 /* ReportsTableViewCell.swift in Sources */,
 				88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */,
 				881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */,
+				885641D828483D9D00C6C96B /* ForecastViewModel.swift in Sources */,
 				881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */,
 				881FF40F2831B2A800E69CD3 /* RegisterViewController.swift in Sources */,
+				885641D628483D7D00C6C96B /* Forecast.swift in Sources */,
 				88614CB028350CAB00523FA0 /* FavoriteSpotsScreen.swift in Sources */,
 				88DEC57B28327396003E5DE5 /* NearLocation.swift in Sources */,
 				881FF40A2831884C00E69CD3 /* LoginViewController.swift in Sources */,
 				88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */,
+				885641D228483CF400C6C96B /* ForecastScreen.swift in Sources */,
 				881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */,
 				881FF3F22831865300E69CD3 /* SceneDelegate.swift in Sources */,
 				88DEC56828326665003E5DE5 /* CheckForecastViewController.swift in Sources */,
+				885641D428483D4500C6C96B /* ForecastTableViewCell.swift in Sources */,
 				88614CB328350D3A00523FA0 /* FavoriteSpotsTableViewCell.swift in Sources */,
 				88DEC57528326BF9003E5DE5 /* CheckForecastScreen.swift in Sources */,
 			);
