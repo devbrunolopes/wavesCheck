@@ -98,7 +98,6 @@ extension AddReportsViewController: UIImagePickerControllerDelegate, UINavigatio
         
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             addReportsScreen?.locationImage.image = pickedImage
-            addReportsScreen?.locationImage.layer.cornerRadius = addReportsScreen?.locationImage.frame.size.height ?? 0 / 2
             addReportsScreen?.locationImage.clipsToBounds = true
             addReportsScreen?.locationImage.contentMode = .scaleAspectFill
         }

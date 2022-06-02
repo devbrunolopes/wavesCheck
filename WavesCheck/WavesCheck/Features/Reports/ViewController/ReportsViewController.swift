@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseStorage
 import FirebaseCoreInternal
 
 class ReportsViewController: UIViewController {
@@ -26,6 +27,10 @@ class ReportsViewController: UIViewController {
         super.viewDidLoad()
         reportsScreen?.configTableViewProtocols(delegate: self, dataSource: self)
         reportsScreen?.delegate(delegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
     }
     
     func getData() {
