@@ -39,7 +39,6 @@ extension RegisterViewController: RegisterScreenProtocol {
         guard let register = registerScreen else {return}
         
         auth?.createUser(withEmail: register.getEmail(), password: register.getPassword(), completion: { success, error in
-            
             if error != nil {
                 print(error ?? "Erro ao cadastrar")
             } else {
