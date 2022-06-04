@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TransitionButton
 
 protocol LoginScreenProtocol: AnyObject {
     func actionforgotPasswordButton()
@@ -81,8 +82,8 @@ class LoginScreen: UIView {
         return button
     }()
     
-    lazy var signInButton: UIButton = {
-        let button = UIButton()
+    lazy var signInButton: TransitionButton = {
+        let button = TransitionButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         button.layer.cornerRadius = 7
@@ -91,6 +92,7 @@ class LoginScreen: UIView {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
+        button.spinnerColor = .white
         return button
     }()
     

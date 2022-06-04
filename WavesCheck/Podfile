@@ -12,5 +12,6 @@ pod 'Firebase/Core'
 pod 'FirebaseFirestore'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+pod 'TransitionButton'
 
 end

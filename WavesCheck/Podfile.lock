@@ -790,6 +790,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.1.0)
+  - TransitionButton (0.5.3)
 
 DEPENDENCIES:
   - Firebase/Core
@@ -797,6 +798,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseAuth
   - FirebaseFirestore
+  - TransitionButton
 
 SPEC REPOS:
   trunk:
@@ -826,6 +828,7 @@ SPEC REPOS:
     - Libuv-gRPC
     - nanopb
     - PromisesObjC
+    - TransitionButton
 
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
@@ -854,7 +857,8 @@ SPEC CHECKSUMS:
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
+  TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
 
-PODFILE CHECKSUM: e5cd957215ff8ac028940872df048ccab74e6fcf
+PODFILE CHECKSUM: c148a616d25e5d09870cf585c1fec5b4f865d955
 
 COCOAPODS: 1.11.3

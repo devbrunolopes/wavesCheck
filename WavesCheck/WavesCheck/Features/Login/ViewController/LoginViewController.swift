@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import TransitionButton
 
 class LoginViewController: UIViewController {
 
@@ -47,8 +48,13 @@ extension LoginViewController: LoginScreenProtocol {
                 if user == nil {
                     self.alert?.configAlert(title: "Ops", message: "O servidor tomou uma vaca, tente novamente na próxima série!")
                 } else {
-                    let vc: TabBarController = TabBarController()
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    self.loginScreen?.signInButton.startAnimation()
+                    DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                        self.loginScreen?.signInButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 0) {
+                            let vc: TabBarController = TabBarController()
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }
+                    }
                 }
             }
         })
