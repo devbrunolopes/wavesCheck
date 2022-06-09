@@ -34,7 +34,7 @@ class AddReportsScreen: UIView {
     lazy var addReportLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Adicionar um novo report"
+        label.text = K.Labels.addNewReports.rawValue
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = label.font.withSize(25)
@@ -52,7 +52,7 @@ class AddReportsScreen: UIView {
     lazy var locationLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Local:"
+        label.text = K.Labels.location.rawValue
         label.numberOfLines = 0
         label.textAlignment = .left
         label.font = label.font.withSize(20)
@@ -78,7 +78,7 @@ class AddReportsScreen: UIView {
     lazy var wavesSizeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Tamanho:"
+        label.text = K.Labels.size.rawValue
         label.numberOfLines = 0
         label.textAlignment = .left
         label.font = label.font.withSize(20)
@@ -104,7 +104,7 @@ class AddReportsScreen: UIView {
     lazy var surfConditionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Condição:"
+        label.text = K.Labels.condition.rawValue
         label.numberOfLines = 0
         label.textAlignment = .left
         label.font = label.font.withSize(20)
@@ -140,7 +140,7 @@ class AddReportsScreen: UIView {
     lazy var addPicButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Adicionar foto", for: .normal)
+        button.setTitle(K.Buttons.addPicture.rawValue, for: .normal)
         button.setTitleColor(UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0), for: .normal)
         button.backgroundColor = .clear
         button.layer.cornerRadius = 7
@@ -151,7 +151,7 @@ class AddReportsScreen: UIView {
     lazy var addReportButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Adicionar Report", for: .normal)
+        button.setTitle(K.Buttons.addReport.rawValue, for: .normal)
         button.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         button.layer.cornerRadius = 7
         button.addTarget(self, action: #selector(self.didTapAddReportButton), for: .touchUpInside)

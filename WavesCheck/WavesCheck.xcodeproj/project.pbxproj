@@ -19,6 +19,7 @@
 		881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */; };
 		883D7DFF28524CCE00257413 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D7DFE28524CCE00257413 /* ProfileViewModel.swift */; };
 		883D7E04285279E700257413 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D7E03285279E700257413 /* User.swift */; };
+		883D7E072852AA4200257413 /* ChooseForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D7E062852AA4200257413 /* ChooseForecastViewModel.swift */; };
 		8851BDD12851A7AF00AD6D82 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851BDD02851A7AF00AD6D82 /* K.swift */; };
 		885641D028483CBD00C6C96B /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641CF28483CBD00C6C96B /* ForecastViewController.swift */; };
 		885641D228483CF400C6C96B /* ForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641D128483CF400C6C96B /* ForecastScreen.swift */; };
@@ -70,6 +71,7 @@
 		881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
 		883D7DFE28524CCE00257413 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		883D7E03285279E700257413 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		883D7E062852AA4200257413 /* ChooseForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseForecastViewModel.swift; sourceTree = "<group>"; };
 		8851BDD02851A7AF00AD6D82 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		885641CF28483CBD00C6C96B /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		885641D128483CF400C6C96B /* ForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastScreen.swift; sourceTree = "<group>"; };
@@ -276,6 +278,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		883D7E052852AA2C00257413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				883D7E062852AA4200257413 /* ChooseForecastViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8851BDCF2851A79C00AD6D82 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +425,7 @@
 		8886E68228523B410010AC41 /* ChooseForecast */ = {
 			isa = PBXGroup;
 			children = (
+				883D7E052852AA2C00257413 /* ViewModel */,
 				8886E68328523B590010AC41 /* Model */,
 				8886E68628523B610010AC41 /* HeaderView */,
 				8886E68F28523B740010AC41 /* Cell */,
@@ -514,8 +525,8 @@
 		88DEC5662832663E003E5DE5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				883D7E02285279DA00257413 /* Model */,
 				883D7DFD28524CBB00257413 /* ViewModel */,
+				883D7E02285279DA00257413 /* Model */,
 				88614CB728350E4C00523FA0 /* Screen */,
 				88DEC56C283266A5003E5DE5 /* ViewController */,
 			);
@@ -729,6 +740,7 @@
 				88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */,
 				881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */,
 				885641D828483D9D00C6C96B /* ForecastViewModel.swift in Sources */,
+				883D7E072852AA4200257413 /* ChooseForecastViewModel.swift in Sources */,
 				885641E928484DCC00C6C96B /* AddReportsScreen.swift in Sources */,
 				8886E68B28523B6A0010AC41 /* ChooseForecastViewController.swift in Sources */,
 				885641E728484D7E00C6C96B /* AddReportsViewController.swift in Sources */,

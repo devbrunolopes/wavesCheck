@@ -9,7 +9,7 @@ import UIKit
 
 class ForecastTableViewCell: UITableViewCell {
 
-    static let identifier: String = "ForecastTableViewCell"
+    static let identifier: String = K.CellIdentifier.forecastTableViewCell.rawValue
     
     lazy var topView: UIView = {
         let view = UIView()
@@ -30,7 +30,7 @@ class ForecastTableViewCell: UITableViewCell {
     lazy var wavesSizeIconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "waveIcon")
+        image.image = UIImage(named: K.Images.wavesIcon.rawValue)
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -47,7 +47,7 @@ class ForecastTableViewCell: UITableViewCell {
     lazy var periodIconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(systemName: "clock")
+        image.image = UIImage(systemName: K.Images.clock.rawValue)
         image.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         image.contentMode = .scaleAspectFit
         return image
@@ -65,7 +65,7 @@ class ForecastTableViewCell: UITableViewCell {
     lazy var swellDirectionIconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(systemName: "location.circle")
+        image.image = UIImage(systemName: K.Images.locationCircle.rawValue)
         image.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         image.contentMode = .scaleAspectFit
         return image
@@ -83,7 +83,7 @@ class ForecastTableViewCell: UITableViewCell {
     lazy var windIconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(systemName: "wind")
+        image.image = UIImage(systemName: K.Images.wind.rawValue)
         image.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         image.contentMode = .scaleAspectFit
         return image

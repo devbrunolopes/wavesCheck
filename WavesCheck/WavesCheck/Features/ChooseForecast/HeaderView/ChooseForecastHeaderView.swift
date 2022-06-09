@@ -7,19 +7,9 @@
 
 import UIKit
 
-protocol ChooseForecastHeaderViewProtocol: AnyObject {
-    func showRowsAction(indexPath: IndexPath, tableView: UITableView)
-}
-
 class ChooseForecastHeaderView: UITableViewHeaderFooterView {
 
-    static let identifier: String = "ChooseForecastHeaderView"
-    
-    weak private var delegate: ChooseForecastHeaderViewProtocol?
-    
-    func delegate(delegate: ChooseForecastHeaderViewProtocol) {
-        self.delegate = delegate
-    }
+    static let identifier: String = K.CellIdentifier.chooseForecastHeaderView.rawValue
     
     lazy var stateLabel: UILabel = {
         let label = UILabel()
@@ -35,9 +25,8 @@ class ChooseForecastHeaderView: UITableViewHeaderFooterView {
     lazy var goButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+        button.setImage(UIImage(systemName: K.Images.chevronDown.rawValue), for: .normal)
         button.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
-        button.addTarget(self, action: #selector(self.didTapGoButton), for: .touchUpInside)
         return button
     }()
     
@@ -56,12 +45,6 @@ class ChooseForecastHeaderView: UITableViewHeaderFooterView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    //MARK: - Gesture Reconizer
-    
-    @objc private func didTapGoButton(){
-        delegate?.showRowsAction(indexPath: indexPath, tableView: tableView)
     }
     
     //MARK: - Public Functions

@@ -24,7 +24,6 @@ class InfoViewController: UIViewController {
 
 extension InfoViewController: InfoViewDelegate {
     func backButtonAction() {
-//        navigationController?.popViewController(animated: true)
         dismiss(animated: true)
     }
 }

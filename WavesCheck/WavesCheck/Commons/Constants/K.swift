@@ -14,6 +14,17 @@ enum K: String {
     case cupertino = "cupertino"
     case nearLocation = "Locais próximos"
     
+    enum Firebase: String {
+        case wavesCheckReports = "wavesCheck/reports"
+        case nameLocation = "nameLocation"
+        case wavezSize = "wavesSize"
+        case surfCondition = "surfCondition"
+        case surfImage = "surfImage"
+        case reportDate = "reportDate"
+        case images = "images"
+        case url = "url"
+    }
+    
     enum Images: String {
         case waves = "waves"
         case back = "back"
@@ -21,6 +32,11 @@ enum K: String {
         case selfLocation = "location.circle.fill"
         case magnifyingglass = "magnifyingglass"
         case goButton = "arrow.right.circle"
+        case wavesIcon = "waveIcon"
+        case clock = "clock"
+        case locationCircle = "location.circle"
+        case wind = "wind"
+        case chevronDown = "chevron.down"
     }
     
     enum TextFields: String {
@@ -37,6 +53,9 @@ enum K: String {
         case noAccount = "Não tem conta? Cadastre-se"
         case send = "Enviar"
         case openInMaps = "Abrir no Mapas"
+        case addPicture = "Adicionar foto"
+        case addReport = "Adicionar Report"
+        case back = "Voltar"
     }
     
     enum Alerts: String {
@@ -56,5 +75,20 @@ enum K: String {
     enum CellIdentifier: String {
         case nearLocationsTableViewCell = "NearLocationsTableViewCell"
         case reportsTableViewCell = "ReportsTableViewCell"
+        case forecastTableViewCell = "ForecastTableViewCell"
+        case chooseForecastHeaderView = "ChooseForecastHeaderView"
+        case chooseForecastTableViewCell = "ChooseForecastTableViewCell"
     }
+    
+    enum Labels: String {
+        case addNewReports = "Adicionar um novo report"
+        case location = "Local:"
+        case size = "Tamanho:"
+        case condition = "Condição:"
+        case wavesSize = " - Tamanho das ondas"
+        case period = " - Período entre as séries"
+        case swellDirection = " - Direção do swell"
+        case windSpeedDirection = " - Velocidade e direção do vento"
+    }
+    
 }

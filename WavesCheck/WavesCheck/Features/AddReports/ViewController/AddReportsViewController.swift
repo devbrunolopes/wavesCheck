@@ -11,13 +11,18 @@ import FirebaseStorage
 import FirebaseAuth
 import FirebaseFirestore
 
-class AddReportsViewController: UIViewController {
+protocol AddReportsViewControllerProtocol: AnyObject {
+    func reloadReportsTableView()
+}
 
+class AddReportsViewController: UIViewController {
+    
+    weak var delegate: AddReportsViewControllerProtocol?
     var addReportsScreen: AddReportsScreen?
     let firestore = Firestore.firestore()
     let storage = Storage.storage().reference()
     let pickerController = UIImagePickerController()
-    var imageURL: String = ""
+    var imageURL: String = K.emptyString.rawValue
   
     override func loadView() {
         self.addReportsScreen = AddReportsScreen()
@@ -30,7 +35,7 @@ class AddReportsViewController: UIViewController {
         addReportsScreen?.configTextFieldDelegate(delegate: self)
         pickerController.delegate = self
         
-        let docRef = firestore.document("wavesCheck/reports")
+        let docRef = firestore.document(K.Firebase.wavesCheckReports.rawValue)
         docRef.getDocument { snapshot, error in
             guard let _ = snapshot?.data(), error == nil else {return}
         }
@@ -46,11 +51,11 @@ class AddReportsViewController: UIViewController {
         let dataPath = "reports/\(UUID().uuidString)"
         let docRef = firestore.document(dataPath)
         docRef.setData([
-            "nameLocation": nameLocation,
-            "wavesSize": wavesSize,
-            "surfCondition": surfCondition,
-            "surfImage": image,
-            "reportDate": Date().timeIntervalSince1970
+            K.Firebase.nameLocation.rawValue: nameLocation,
+            K.Firebase.wavezSize.rawValue: wavesSize,
+            K.Firebase.surfCondition.rawValue: surfCondition,
+            K.Firebase.surfImage.rawValue: image,
+            K.Firebase.reportDate.rawValue: Date().timeIntervalSince1970
         ])
     }
     
@@ -67,8 +72,8 @@ class AddReportsViewController: UIViewController {
                 imageRef.downloadURL { url, error in
                     if error == nil{
                         if let urlImagem = url?.absoluteString{
-                            self.firestore.collection("images").document().setData([
-                                "url": urlImagem
+                            self.firestore.collection(K.Firebase.images.rawValue).document().setData([
+                                K.Firebase.url.rawValue: urlImagem
                             ])
                             self.completionReport(with: urlImagem)
                         }
@@ -82,8 +87,8 @@ class AddReportsViewController: UIViewController {
         }
     }
     
-    private func completionReport(with url:String = ""){
-        self.saveReport(nameLocation: self.addReportsScreen?.locationTextField.text ?? "", wavesSize: self.addReportsScreen?.wavesSizeTextField.text ?? "", surfCondition: self.addReportsScreen?.surfConditionTextField.text ?? "", image: url)
+    private func completionReport(with url:String = K.emptyString.rawValue){
+        self.saveReport(nameLocation: self.addReportsScreen?.locationTextField.text ?? K.emptyString.rawValue, wavesSize: self.addReportsScreen?.wavesSizeTextField.text ?? K.emptyString.rawValue, surfCondition: self.addReportsScreen?.surfConditionTextField.text ?? K.emptyString.rawValue, image: url)
     }
 }
 
@@ -96,6 +101,7 @@ extension AddReportsViewController: AddReportsScreenProtocol {
     
     func addReportButtonAction() {
         saveImageReport()
+        delegate?.reloadReportsTableView()
         dismiss(animated: true)
     }
     

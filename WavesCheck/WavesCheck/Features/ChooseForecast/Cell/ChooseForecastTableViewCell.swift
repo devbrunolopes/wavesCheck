@@ -13,7 +13,7 @@ protocol ChooseForecastTableViewCellProtocol: AnyObject {
 
 class ChooseForecastTableViewCell: UITableViewCell {
 
-    static let identifier: String = "ChooseForecastTableViewCell"
+    static let identifier: String = K.CellIdentifier.chooseForecastTableViewCell.rawValue
     
     weak private var delegate: ChooseForecastTableViewCellProtocol?
     
@@ -35,7 +35,7 @@ class ChooseForecastTableViewCell: UITableViewCell {
     lazy var goButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "arrow.right.circle"), for: .normal)
+        button.setImage(UIImage(systemName: K.Images.goButton.rawValue), for: .normal)
         button.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         button.addTarget(self, action: #selector(self.didTapGoButton), for: .touchUpInside)
         return button

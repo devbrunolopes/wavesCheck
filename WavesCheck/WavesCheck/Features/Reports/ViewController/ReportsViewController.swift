@@ -26,6 +26,7 @@ class ReportsViewController: UIViewController {
         super.viewDidLoad()
         reportsScreen?.configTableViewProtocols(delegate: self, dataSource: self)
         reportsScreen?.delegate(delegate: self)
+        addReportsViewController?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,7 +62,16 @@ class ReportsViewController: UIViewController {
 extension ReportsViewController: ReportsScreenProtocol {
     func addReportAction() {
         let vc: AddReportsViewController = AddReportsViewController()
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
+    }
+}
+
+//MARK: - ReportsScreenProtocol
+
+extension ReportsViewController: AddReportsViewControllerProtocol {
+    func reloadReportsTableView() {
+        reportsScreen?.tableView.reloadData()
     }
 }
 

@@ -29,7 +29,7 @@ class InfoScreen: UIView {
     lazy var wavesSizeIconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "waveIcon")
+        image.image = UIImage(named: K.Images.wavesIcon.rawValue)
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -40,14 +40,14 @@ class InfoScreen: UIView {
         label.textColor = .black
         label.font = label.font.withSize(17)
         label.numberOfLines = 0
-        label.text = " - Tamanho das ondas"
+        label.text = K.Labels.wavesSize.rawValue
         return label
     }()
     
     lazy var periodIconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(systemName: "clock")
+        image.image = UIImage(systemName: K.Images.clock.rawValue)
         image.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         image.contentMode = .scaleAspectFit
         return image
@@ -58,14 +58,14 @@ class InfoScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.font = label.font.withSize(17)
-        label.text = " - Período entre as séries"
+        label.text = K.Labels.period.rawValue
         return label
     }()
     
     lazy var swellDirectionIconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(systemName: "location.circle")
+        image.image = UIImage(systemName: K.Images.locationCircle.rawValue)
         image.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         image.contentMode = .scaleAspectFit
         return image
@@ -76,14 +76,14 @@ class InfoScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.font = label.font.withSize(17)
-        label.text = " - Direção do swell"
+        label.text = K.Labels.swellDirection.rawValue
         return label
     }()
     
     lazy var windIconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(systemName: "wind")
+        image.image = UIImage(systemName: K.Images.wind.rawValue)
         image.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         image.contentMode = .scaleAspectFit
         return image
@@ -95,14 +95,14 @@ class InfoScreen: UIView {
         label.textColor = .black
         label.font = label.font.withSize(15)
         label.numberOfLines = 0
-        label.text = " - Velocidade e direção do vento"
+        label.text = K.Labels.windSpeedDirection.rawValue
         return label
     }()
     
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Voltar", for: .normal)
+        button.setTitle(K.Buttons.back.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         button.setTitleColor(.white , for: .normal)
