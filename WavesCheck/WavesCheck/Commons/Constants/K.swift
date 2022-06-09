@@ -55,5 +55,6 @@ enum K: String {
     
     enum CellIdentifier: String {
         case nearLocationsTableViewCell = "NearLocationsTableViewCell"
+        case reportsTableViewCell = "ReportsTableViewCell"
     }
 }

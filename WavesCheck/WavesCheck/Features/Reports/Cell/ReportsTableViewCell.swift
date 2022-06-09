@@ -12,7 +12,7 @@ import AlamofireImage
 
 class ReportsTableViewCell: UITableViewCell {
 
-    static let identifier: String = "ReportsTableViewCell"
+    static let identifier: String = K.CellIdentifier.reportsTableViewCell.rawValue
     
     lazy var locationLabel: UILabel = {
         let label = UILabel()

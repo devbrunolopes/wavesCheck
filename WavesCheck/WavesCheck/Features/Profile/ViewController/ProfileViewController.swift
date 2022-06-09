@@ -115,7 +115,7 @@ class ProfileViewController: UIViewController {
                 }
                 
             } else {
-                //handle errors
+                self.alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.wipeOut.rawValue, completion: nil)
             }
         }
     }
@@ -177,7 +177,14 @@ extension ProfileViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        if textField == profileScreen?.nameTextField {
+            profileScreen?.birthdayTextField.becomeFirstResponder()
+        } else if textField == profileScreen?.birthdayTextField {
+            profileScreen?.genderTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

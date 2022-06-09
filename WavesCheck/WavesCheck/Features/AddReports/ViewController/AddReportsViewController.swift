@@ -27,7 +27,7 @@ class AddReportsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addReportsScreen?.delegate(delegate: self)
-        
+        addReportsScreen?.configTextFieldDelegate(delegate: self)
         pickerController.delegate = self
         
         let docRef = firestore.document("wavesCheck/reports")
@@ -95,7 +95,6 @@ extension AddReportsViewController: AddReportsScreenProtocol {
     }
     
     func addReportButtonAction() {
-        print(#function)
         saveImageReport()
         dismiss(animated: true)
     }
@@ -117,7 +116,6 @@ extension AddReportsViewController: UIImagePickerControllerDelegate, UINavigatio
             addReportsScreen?.locationImage.clipsToBounds = true
             addReportsScreen?.locationImage.contentMode = .scaleAspectFill
         }
-        
         dismiss(animated: true, completion: nil)
     }
     
@@ -129,5 +127,28 @@ extension AddReportsViewController: UIImagePickerControllerDelegate, UINavigatio
 //MARK: - UITextFieldDelegate
 
 extension AddReportsViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 2.0
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == addReportsScreen?.locationTextField {
+            addReportsScreen?.wavesSizeTextField.becomeFirstResponder()
+        } else if textField == addReportsScreen?.wavesSizeTextField {
+            addReportsScreen?.surfConditionTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     
 }
