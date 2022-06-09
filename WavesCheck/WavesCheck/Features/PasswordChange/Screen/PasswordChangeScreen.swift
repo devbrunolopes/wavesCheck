@@ -84,7 +84,7 @@ class PasswordChangeScreen: UIView {
         configBackGround()
         addSubView()
         setUpConstraints()
-        enableButton(true)
+        enableButton(false)
     }
     
     required init?(coder: NSCoder) {
