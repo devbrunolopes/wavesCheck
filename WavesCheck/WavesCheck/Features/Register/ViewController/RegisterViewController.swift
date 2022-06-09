@@ -40,7 +40,7 @@ extension RegisterViewController: RegisterScreenProtocol {
         
         auth?.createUser(withEmail: register.getEmail(), password: register.getPassword(), completion: { success, error in
             if error != nil {
-                print(error ?? "Erro ao cadastrar")
+                self.alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.wipeOut.rawValue, completion: nil)
             } else {
                 let vc: TabBarController = TabBarController()
                 self.navigationController?.pushViewController(vc, animated: true)

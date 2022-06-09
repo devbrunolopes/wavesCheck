@@ -25,7 +25,7 @@ class CheckForecastScreen: UIView {
     lazy var selfLocationButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "location.circle.fill"), for: .normal)
+        button.setImage(UIImage(systemName: K.Images.selfLocation.rawValue), for: .normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(didTapSelfLocationButton), for: .touchUpInside)
         return button
@@ -37,7 +37,7 @@ class CheckForecastScreen: UIView {
         textField.layer.borderColor = CGColor(red: 255, green: 255, blue: 255, alpha: 1)
         textField.layer.cornerRadius = 7
         textField.borderStyle = .roundedRect
-        textField.placeholder = "Search"
+        textField.placeholder = K.TextFields.search.rawValue
         textField.textColor = .darkGray
         return textField
     }()
@@ -45,7 +45,7 @@ class CheckForecastScreen: UIView {
     lazy var searchButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        button.setImage(UIImage(systemName: K.Images.magnifyingglass.rawValue), for: .normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(didTapSearchButton), for: .touchUpInside)
         return button
@@ -70,7 +70,7 @@ class CheckForecastScreen: UIView {
     lazy var navigateButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Abrir no Mapas", for: .normal)
+        button.setTitle(K.Buttons.openInMaps.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 10

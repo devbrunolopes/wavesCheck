@@ -17,6 +17,7 @@
 		881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4102831B2B500E69CD3 /* RegisterScreen.swift */; };
 		881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */; };
 		881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */; };
+		8851BDD12851A7AF00AD6D82 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851BDD02851A7AF00AD6D82 /* K.swift */; };
 		885641D028483CBD00C6C96B /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641CF28483CBD00C6C96B /* ForecastViewController.swift */; };
 		885641D228483CF400C6C96B /* ForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641D128483CF400C6C96B /* ForecastScreen.swift */; };
 		885641D428483D4500C6C96B /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641D328483D4500C6C96B /* ForecastTableViewCell.swift */; };
@@ -64,6 +65,7 @@
 		881FF4102831B2B500E69CD3 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreen.swift; sourceTree = "<group>"; };
 		881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
+		8851BDD02851A7AF00AD6D82 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		885641CF28483CBD00C6C96B /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		885641D128483CF400C6C96B /* ForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastScreen.swift; sourceTree = "<group>"; };
 		885641D328483D4500C6C96B /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
@@ -252,6 +254,14 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		8851BDCF2851A79C00AD6D82 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8851BDD02851A7AF00AD6D82 /* K.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		885641C928483C6A00C6C96B /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +400,7 @@
 		88614CBA2835162B00523FA0 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				8851BDCF2851A79C00AD6D82 /* Constants */,
 				88614CBB2835163500523FA0 /* Alert */,
 			);
 			path = Commons;
@@ -678,6 +689,7 @@
 				88614CB628350D7300523FA0 /* LocationName.swift in Sources */,
 				88614CB928350E6C00523FA0 /* ProfileScreen.swift in Sources */,
 				88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */,
+				8851BDD12851A7AF00AD6D82 /* K.swift in Sources */,
 				88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */,
 				88DEC58128327C70003E5DE5 /* ReportsTableViewCell.swift in Sources */,
 				88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */,

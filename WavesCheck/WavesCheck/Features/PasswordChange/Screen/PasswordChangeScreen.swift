@@ -23,7 +23,7 @@ class PasswordChangeScreen: UIView {
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "back"), for: .normal)
+        button.setImage(UIImage(named: K.Images.back.rawValue), for: .normal)
         button.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         button.addTarget(self, action: #selector(didTapbackButton), for: .touchUpInside)
         return button
@@ -32,7 +32,7 @@ class PasswordChangeScreen: UIView {
     lazy var logoAppImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "duckSurfer")
+        image.image = UIImage(named: K.Images.duck.rawValue)
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -40,7 +40,7 @@ class PasswordChangeScreen: UIView {
     lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Use seu email cadastrado para recuperar a senha:"
+        label.text = K.forgotPasswordLabel.rawValue
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = label.font.withSize(20)
@@ -58,7 +58,7 @@ class PasswordChangeScreen: UIView {
         textField.layer.borderColor = CGColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         textField.layer.borderWidth = 1.0
         textField.keyboardType = .emailAddress
-        textField.placeholder = "Digite seu email"
+        textField.placeholder = K.TextFields.email.rawValue
         textField.textColor = .darkGray
         textField.autocapitalizationType = .none
         return textField
@@ -70,7 +70,7 @@ class PasswordChangeScreen: UIView {
         button.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         button.layer.cornerRadius = 7
         button.clipsToBounds = true
-        button.setTitle("Enviar", for: .normal)
+        button.setTitle(K.Buttons.send.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(didTapChangePasswordButton), for: .touchUpInside)
@@ -108,7 +108,7 @@ class PasswordChangeScreen: UIView {
     }
     
     public func validateTextField() {
-        if emailTextField.text != "" {
+        if emailTextField.text != K.emptyString.rawValue {
             enableButton(true)
         } else {
             enableButton(false)

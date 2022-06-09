@@ -75,6 +75,6 @@ extension ForecastViewController: ForecastViewModelDelegate {
     }
     
     func error() {
-        alert?.configAlert(title: "Ops", message: "Nosso servidor tomou uma vaca, tente novamente na próxima série!", completion: nil)
+        alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.wipeOut.rawValue, completion: nil)
     }
 }

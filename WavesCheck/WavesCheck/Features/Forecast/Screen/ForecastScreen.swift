@@ -23,7 +23,7 @@ class ForecastScreen: UIView {
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "back"), for: .normal)
+        button.setImage(UIImage(named: K.Images.back.rawValue), for: .normal)
         button.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         button.addTarget(self, action: #selector(self.didTapBackButton), for: .touchUpInside)
         return button

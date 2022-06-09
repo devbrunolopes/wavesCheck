@@ -43,10 +43,10 @@ extension LoginViewController: LoginScreenProtocol {
         auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { user, error in
             
             if error != nil {
-                self.alert?.configAlert(title: "Ops", message: "Email e/ou senha incorretos!")
+                self.alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.wrongData.rawValue)
             } else {
                 if user == nil {
-                    self.alert?.configAlert(title: "Ops", message: "O servidor tomou uma vaca, tente novamente na próxima série!")
+                    self.alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.wipeOut.rawValue)
                 } else {
                     self.loginScreen?.signInButton.startAnimation()
                     DispatchQueue.main.asyncAfter(deadline: .now()+1) {

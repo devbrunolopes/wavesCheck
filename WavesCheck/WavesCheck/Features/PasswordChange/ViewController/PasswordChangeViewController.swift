@@ -37,12 +37,12 @@ extension PasswordChangeViewController: PasswordChangeScreenProtocol {
     
     func changePasswordButtonAction() {
         
-        auth?.sendPasswordReset(withEmail: passwordChangeScreen?.emailTextField.text ?? "", completion: { error in
+        auth?.sendPasswordReset(withEmail: passwordChangeScreen?.emailTextField.text ?? K.emptyString.rawValue, completion: { error in
             if let error = error {
-                self.alert?.configAlert(title: "Ops", message: error.localizedDescription)
+                self.alert?.configAlert(title: K.Alerts.ops.rawValue, message: error.localizedDescription)
             }
             
-            self.alert?.configAlert(title: "Izzaaaa", message: "Email enviado com sucesso, verifique sua caixa de email/spam em instantes!")
+            self.alert?.configAlert(title: K.Alerts.iza.rawValue, message: K.Alerts.sentEmail.rawValue)
             
         })
     }

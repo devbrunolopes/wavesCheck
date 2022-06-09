@@ -60,7 +60,7 @@ class CheckForecastViewController: UIViewController {
             setUpLocationManager()
             checkLocationAuthorization()
         } else {
-            self.alert?.configAlert(title: "Ops", message: "Para uma experiência melhor, autorizar o uso da sua localização!", completion: nil)
+            self.alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.locationExperience.rawValue, completion: nil)
         }
     }
     
@@ -100,9 +100,9 @@ class CheckForecastViewController: UIViewController {
     
     func getAddress() {
         let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(checkForecastScreen.searchTextField.text ?? "") { placemarks, error in
+        geocoder.geocodeAddressString(checkForecastScreen.searchTextField.text ?? K.emptyString.rawValue) { placemarks, error in
             guard let placemarks = placemarks, let location = placemarks.first?.location else {
-                self.alert?.configAlert(title: "Ops", message: "Não encontramos nenhuma localização :(", completion: nil)
+                self.alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.noLocationFound.rawValue, completion: nil)
                 return
             }
             self.createDirections(destination: location.coordinate)
@@ -170,13 +170,13 @@ class CheckForecastViewController: UIViewController {
     }
     
     func showMaps() {
-        let destination = checkForecastScreen.searchTextField.text ?? "cupertino"
+        let destination = checkForecastScreen.searchTextField.text ?? K.cupertino.rawValue
         guard let _destination = destination.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
             //alert erro city name
             return
         }
         
-        let url = "http://maps.apple.com/?q="
+        let url = K.URL.mapsApp.rawValue
         let mapsURL = "\(url)\(_destination)"
         if (UIApplication.shared.canOpenURL(URL(string: mapsURL)!)) {
           UIApplication.shared.openURL(URL(string: mapsURL)!)
@@ -249,7 +249,7 @@ extension CheckForecastViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Locais próximos"
+        return K.nearLocation.rawValue
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

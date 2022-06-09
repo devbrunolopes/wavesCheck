@@ -27,14 +27,14 @@ class LoginScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         label.font = UIFont.boldSystemFont(ofSize: 40)
-        label.text = "WavesCheck"
+        label.text = K.appName.rawValue
         return label
     }()
     
     lazy var logoAppImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "waves")
+        image.image = UIImage(named: K.Images.waves.rawValue)
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -49,7 +49,7 @@ class LoginScreen: UIView {
         textField.layer.borderColor = CGColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         textField.layer.borderWidth = 1.0
         textField.keyboardType = .emailAddress
-        textField.placeholder = "Digite seu email"
+        textField.placeholder = K.TextFields.email.rawValue
         textField.text = "brunolopes0203@gmail.com"
         textField.textColor = .darkGray
         textField.autocapitalizationType = .none
@@ -66,7 +66,7 @@ class LoginScreen: UIView {
         textField.layer.borderColor = CGColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         textField.layer.borderWidth = 1.0
         textField.keyboardType = .default
-        textField.placeholder = "Digite a sua senha"
+        textField.placeholder = K.TextFields.password.rawValue
         textField.textColor = .darkGray
         textField.text = "123456"
         textField.autocapitalizationType = .none
@@ -77,7 +77,7 @@ class LoginScreen: UIView {
     lazy var forgotPasswordButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Esqueceu a senha?", for: .normal)
+        button.setTitle(K.Buttons.forgotPassword.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.setTitleColor(UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0), for: .normal)
         button.addTarget(self, action: #selector(didTapforgotPasswordButton), for: .touchUpInside)
@@ -90,7 +90,7 @@ class LoginScreen: UIView {
         button.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         button.layer.cornerRadius = 7
         button.clipsToBounds = true
-        button.setTitle("Entrar", for: .normal)
+        button.setTitle(K.Buttons.signIn.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
@@ -101,7 +101,7 @@ class LoginScreen: UIView {
     lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Não tem conta? Cadastre-se", for: .normal)
+        button.setTitle(K.Buttons.noAccount.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0), for: .normal)
         button.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
@@ -145,7 +145,7 @@ class LoginScreen: UIView {
     }
     
     public func validateTextField() {
-        if emailTextField.text != "" && passwordTextField.text != "" {
+        if emailTextField.text != K.emptyString.rawValue && passwordTextField.text != K.emptyString.rawValue {
             enableButton(true)
         } else {
             enableButton(false)
@@ -153,11 +153,11 @@ class LoginScreen: UIView {
     }
     
     public func getEmail() -> String {
-        return emailTextField.text ?? ""
+        return emailTextField.text ?? K.emptyString.rawValue
     }
     
     public func getPassword() -> String {
-        return passwordTextField.text ?? ""
+        return passwordTextField.text ?? K.emptyString.rawValue
     }
     
     //MARK: - Private Functions
