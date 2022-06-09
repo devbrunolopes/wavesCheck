@@ -17155,7 +17155,7 @@
 		E22DE5A085DAD2B62E1C46078606207B /* overload.upbdefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = overload.upbdefs.h; path = "src/core/ext/upbdefs-generated/envoy/config/overload/v3/overload.upbdefs.h"; sourceTree = "<group>"; };
 		E23D18B6339EB5C0344CCFDAFDDCBD80 /* tls_security_connector.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = tls_security_connector.cc; path = src/core/lib/security/security_connector/tls/tls_security_connector.cc; sourceTree = "<group>"; };
 		E242167F87A9684E2C17E97CF9D36774 /* cordz_update_scope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cordz_update_scope.h; path = absl/strings/internal/cordz_update_scope.h; sourceTree = "<group>"; };
-		E25BA3117E6384ECD3A625823E218C8B /* Pods-WavesCheck */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WavesCheck"; path = Pods_WavesCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25BA3117E6384ECD3A625823E218C8B /* Pods_WavesCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WavesCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26C0E82E6E0186B3CA1E45D9481B4DC /* FIRStorageUploadTask_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRStorageUploadTask_Private.h; path = FirebaseStorageInternal/Sources/FIRStorageUploadTask_Private.h; sourceTree = "<group>"; };
 		E27D30467A120297B685839BB31ADA34 /* demangle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = demangle.h; path = absl/debugging/internal/demangle.h; sourceTree = "<group>"; };
 		E2957BBFEF53962C9595CDB892EBF592 /* e_chacha20poly1305.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = e_chacha20poly1305.c; path = src/crypto/cipher_extra/e_chacha20poly1305.c; sourceTree = "<group>"; };
@@ -23254,7 +23254,7 @@
 				0A9F46A999C47653013D3AD854352507 /* leveldb.framework */,
 				6BC54C3D03DEBF9C3A40965E69CAE039 /* uv.framework */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
-				E25BA3117E6384ECD3A625823E218C8B /* Pods-WavesCheck */,
+				E25BA3117E6384ECD3A625823E218C8B /* Pods_WavesCheck.framework */,
 				3347A1AB6546F0A3977529B8F199DC41 /* FBLPromises.framework */,
 				5F6BA03A0925860EA21A0CB5F550E9CB /* TransitionButton.framework */,
 			);
@@ -27043,7 +27043,7 @@
 			);
 			name = "Pods-WavesCheck";
 			productName = Pods_WavesCheck;
-			productReference = E25BA3117E6384ECD3A625823E218C8B /* Pods-WavesCheck */;
+			productReference = E25BA3117E6384ECD3A625823E218C8B /* Pods_WavesCheck.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		23E7C4A52360C026F97E4A96D91B03CE /* FirebaseStorage */ = {
