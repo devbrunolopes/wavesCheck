@@ -11,6 +11,7 @@ import MapKit
 protocol CheckForecastScreenProtocol: AnyObject {
     func selfLocationButtonAction()
     func searchButtonAction()
+    func navigateButtonAction()
 }
 
 class CheckForecastScreen: UIView {
@@ -66,6 +67,18 @@ class CheckForecastScreen: UIView {
         return map
     }()
     
+    lazy var navigateButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Abrir no Mapas", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 10
+        button.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
+        button.addTarget(self, action: #selector(self.didTapNavigateButton), for: .touchUpInside)
+        return button
+    }()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -98,6 +111,10 @@ class CheckForecastScreen: UIView {
         delegate?.searchButtonAction()
     }
     
+    @objc private func didTapNavigateButton(){
+        delegate?.navigateButtonAction()
+    }
+    
     //MARK: - Public Functions
     
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
@@ -114,6 +131,7 @@ class CheckForecastScreen: UIView {
     private func addSubView() {
         addSubview(self.userWelcomeStackView)
         addSubview(self.mapView)
+        addSubview(self.navigateButton)
         addSubview(self.tableView)
     }
     
@@ -128,6 +146,11 @@ class CheckForecastScreen: UIView {
             mapView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             mapView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             mapView.heightAnchor.constraint(equalToConstant: 350),
+            
+            navigateButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
+            navigateButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
+            navigateButton.bottomAnchor.constraint(equalTo: self.mapView.bottomAnchor, constant: -30),
+            navigateButton.heightAnchor.constraint(equalToConstant: 35),
             
             tableView.topAnchor.constraint(equalTo: mapView.bottomAnchor,constant: 0),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),

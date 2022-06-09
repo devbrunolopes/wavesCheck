@@ -7,32 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AB103F93-DDDA-4CF6-BF19-A3150694BE25"
+            uuid = "BDEB2FCD-91A5-4969-93C3-A2279878CFE7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WavesCheck/Features/Login/ViewController/LoginViewController.swift"
+            filePath = "WavesCheck/Features/CheckForecast/ViewController/CheckForecastViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "actionSignInButton()"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "33CE7A8E-353B-43E9-A2E3-9069F471BC5D"
+            uuid = "E05A6A55-3D71-45EE-8DDF-9C1C2D8D69A8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WavesCheck/Features/Login/ViewController/LoginViewController.swift"
+            filePath = "WavesCheck/Features/CheckForecast/ViewController/CheckForecastViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "actionSignInButton()"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "loadView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
