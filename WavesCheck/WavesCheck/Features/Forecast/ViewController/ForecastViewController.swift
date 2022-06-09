@@ -11,6 +11,7 @@ class ForecastViewController: UIViewController {
 
     var forecastScreen: ForecastScreen?
     let viewModel: ForecastViewModel = ForecastViewModel()
+    var alert: Alert?
     
     override func loadView() {
         forecastScreen = ForecastScreen()
@@ -22,13 +23,11 @@ class ForecastViewController: UIViewController {
         forecastScreen?.delegate(delegate: self)
         viewModel.delegate(delegate: self)
         viewModel.getForecastRequest()
-        configTableView()
     }
     
     private func configTableView() {
         forecastScreen?.configTableViewProtocols(delegate: self, dataSource: self)
         forecastScreen?.tableView.reloadData()
-        print("VAMOOOO \(viewModel.forecast)")
     }
 }
 
@@ -44,7 +43,6 @@ extension ForecastViewController: ForecastScreenProtocol {
         let vc: InfoViewController = InfoViewController()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
-//        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -53,12 +51,12 @@ extension ForecastViewController: ForecastScreenProtocol {
 extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.forecastCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ForecastTableViewCell.identifier) as? ForecastTableViewCell
-//        cell?.setUpCell(report: reports[indexPath.row])
+        cell?.setUpCell(forecast: viewModel.forecast[indexPath.row])
         return cell ?? UITableViewCell()
     }
     
@@ -77,6 +75,6 @@ extension ForecastViewController: ForecastViewModelDelegate {
     }
     
     func error() {
-        print("Deu ruim FDP")
+        alert?.configAlert(title: "Ops", message: "Nosso servidor tomou uma vaca, tente novamente na próxima série!", completion: nil)
     }
 }

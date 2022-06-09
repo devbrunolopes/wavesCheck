@@ -9,36 +9,29 @@ import Foundation
 
 // MARK: - Forecast
 struct Forecast: Codable {
-    var hours: [Hour]
-    var meta: Meta
+    var hours: [Hour]?
+    var meta: Meta?
 }
 
 // MARK: - Hour
 struct Hour: Codable {
-    var swellDirection: SwellDirection
-    var time: Date
-    var waveHeight, wavePeriod: [String: Double]
-    var windDirection, windSpeed: Wind
+    var swellDirection: SwellDirection?
+    var time: String?
+    var waveHeight, wavePeriod, windDirection, windSpeed: SwellDirection?
 }
 
 // MARK: - SwellDirection
 struct SwellDirection: Codable {
-    var dwd, icon: Double?
-    var meteo, noaa, sg: Double
-}
-
-// MARK: - Wind
-struct Wind: Codable {
-    var icon: Double?
-    var noaa, sg, smhi: Double
+    var icon, meteo, noaa, sg: Double?
 }
 
 // MARK: - Meta
 struct Meta: Codable {
-    var cost, dailyQuota: Int
-    var end: String
-    var lat, lng: Double
-    var params: [String]
-    var requestCount: Int
-    var start: String
+    var cost, dailyQuota: Int?
+    var end: String?
+    var lat, lng: Double?
+    var params: [String]?
+    var requestCount: Int?
+    var start: String?
 }
+

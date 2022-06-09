@@ -21,24 +21,23 @@ class ForecastViewModel {
         self.delegate = delegate
     }
     
-//    private let service: ForecastService = ForecastService()
+    private let service: ForecastService = ForecastService()
     
     var forecast: [Hour] = []
     
     public func getForecastRequest() {
-//        service.getForecast { success, error in
-//            if let success = success {
-//                self.forecast = success
-//                print(self.forecast)
-//                self.delegate?.success()
-//            } else {
-//                self.delegate?.error()
-//            }
-//        }
+        service.getForecast { success, error in
+            if let success = success {
+                self.forecast = success
+                print(self.forecast)
+                self.delegate?.success()
+            } else {
+                self.delegate?.error()
+            }
+        }
     }
     
     public var forecastCount: Int {
-        return forecast.count
+        return 10
     }
-    
 }

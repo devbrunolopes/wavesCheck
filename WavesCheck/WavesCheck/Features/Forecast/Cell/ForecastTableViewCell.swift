@@ -101,6 +101,8 @@ class ForecastTableViewCell: UITableViewCell {
     
     //MARK: - Initializers
     
+    let viewModel = ForecastTableViewCellViewModel()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
@@ -111,6 +113,15 @@ class ForecastTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Public Functions
+    
+    public func setUpCell(forecast: Hour) {
+        wavesSizeLabel.text = "\(String(format: "%.1f", forecast.waveHeight?.noaa ?? 0))m"
+        periodLabel.text = "\(String(format: "%.0f", forecast.wavePeriod?.noaa ?? 7))s"
+        swellDirectionLabel.text = viewModel.getSwellDirectionString(parametro: forecast.swellDirection?.noaa ?? 0)
+        windLabel.text = "\(String(format: "%.0f", forecast.windSpeed?.noaa ?? 0))/\(viewModel.getWindDirectionString(parametro: forecast.windDirection?.noaa ?? 0))"
     }
     
     //MARK: - Private Functions

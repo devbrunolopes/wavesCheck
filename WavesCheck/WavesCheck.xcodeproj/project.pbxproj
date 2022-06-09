@@ -34,6 +34,7 @@
 		88614CBF28353B1700523FA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88614CBE28353B1700523FA0 /* GoogleService-Info.plist */; };
 		8899440F28519A8C0013E7CB /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899440E28519A8C0013E7CB /* ForecastService.swift */; };
 		8899441128519AA30013E7CB /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899441028519AA30013E7CB /* GenericService.swift */; };
+		8899441428519CD20013E7CB /* ForecastTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899441328519CD20013E7CB /* ForecastTableViewCellViewModel.swift */; };
 		88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC5612832654A003E5DE5 /* TabBarController.swift */; };
 		88DEC56828326665003E5DE5 /* CheckForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */; };
 		88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */; };
@@ -80,6 +81,7 @@
 		88614CBE28353B1700523FA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8899440E28519A8C0013E7CB /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		8899441028519AA30013E7CB /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
+		8899441328519CD20013E7CB /* ForecastTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		88DEC5612832654A003E5DE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForecastViewController.swift; sourceTree = "<group>"; };
 		88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				885641D328483D4500C6C96B /* ForecastTableViewCell.swift */,
+				8899441228519CBE0013E7CB /* Model */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -407,6 +410,14 @@
 				8899441028519AA30013E7CB /* GenericService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		8899441228519CBE0013E7CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8899441328519CD20013E7CB /* ForecastTableViewCellViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		88DEC56028326504003E5DE5 /* TabBar */ = {
@@ -659,6 +670,7 @@
 				885641D028483CBD00C6C96B /* ForecastViewController.swift in Sources */,
 				88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */,
 				885641E02848416D00C6C96B /* InfoViewController.swift in Sources */,
+				8899441428519CD20013E7CB /* ForecastTableViewCellViewModel.swift in Sources */,
 				881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */,
 				8899440F28519A8C0013E7CB /* ForecastService.swift in Sources */,
 				881FF3F02831865300E69CD3 /* AppDelegate.swift in Sources */,
