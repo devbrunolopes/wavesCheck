@@ -9,7 +9,6 @@ import UIKit
 
 protocol ProfileScreenProtocol: AnyObject {
     func editPictureButtonAction()
-    func changePasswordButtonAction()
     func saveButtonAction()
     func logOutButtonAction()
 }
@@ -25,7 +24,7 @@ class ProfileScreen: UIView {
     lazy var userImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "eu")
+        image.image = UIImage(systemName: "person.fill")
         image.contentMode = .scaleAspectFill
         image.layer.cornerRadius = 50
         image.layer.masksToBounds = false
@@ -85,7 +84,6 @@ class ProfileScreen: UIView {
     lazy var birthdayLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Data de nascimento:"
         label.numberOfLines = 0
         label.textAlignment = .left
         label.font = label.font.withSize(20)
@@ -130,19 +128,6 @@ class ProfileScreen: UIView {
         textField.keyboardType = .default
         textField.textColor = .darkGray
         return textField
-    }()
-    
-    lazy var changePasswordButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 7
-        button.clipsToBounds = true
-        button.setTitle("Alterar Senha", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        button.setTitleColor(UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0), for: .normal)
-        button.addTarget(self, action: #selector(didTapChangePasswordButton), for: .touchUpInside)
-        return button
     }()
     
     lazy var saveButton: UIButton = {
@@ -190,10 +175,6 @@ class ProfileScreen: UIView {
         delegate?.editPictureButtonAction()
     }
     
-    @objc private func didTapChangePasswordButton() {
-        delegate?.changePasswordButtonAction()
-    }
-    
     @objc private func didTapSaveButton() {
         delegate?.saveButtonAction()
     }
@@ -226,7 +207,6 @@ class ProfileScreen: UIView {
         addSubview(birthdayTextField)
         addSubview(genderLabel)
         addSubview(genderTextField)
-        addSubview(changePasswordButton)
         addSubview(saveButton)
         addSubview(logOutButton)
     }
@@ -272,12 +252,7 @@ class ProfileScreen: UIView {
             genderTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             genderTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             
-            changePasswordButton.topAnchor.constraint(equalTo: genderTextField.bottomAnchor, constant: 20),
-            changePasswordButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            changePasswordButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
-            changePasswordButton.heightAnchor.constraint(equalToConstant: 20),
-            
-            saveButton.topAnchor.constraint(equalTo: changePasswordButton.bottomAnchor, constant: 15),
+            saveButton.topAnchor.constraint(equalTo: genderTextField.bottomAnchor, constant: 15),
             saveButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             saveButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             saveButton.heightAnchor.constraint(equalToConstant: 40),

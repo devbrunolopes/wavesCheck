@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
+import AlamofireImage
 
 class ProfileViewController: UIViewController {
 
@@ -14,6 +16,10 @@ class ProfileViewController: UIViewController {
     var auth: Auth?
     var alert: Alert?
     let pickerController = UIImagePickerController()
+    var viewModel = ProfileViewModel()
+    let firestore = Firestore.firestore()
+    let storage = Storage.storage().reference()
+    var user: [User] = []
     
     override func loadView() {
         profileScreen = ProfileScreen()
@@ -29,11 +35,91 @@ class ProfileViewController: UIViewController {
         alert = Alert(controller: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getUserData()
+    }
+    
+    func initialConfig() {
+        profileScreen?.nameTextField.text = user[0].name
+        profileScreen?.birthdayTextField.text = user[0].birthday
+        profileScreen?.genderTextField.text = user[0].gender
+        let url = URL(string: user[0].image) ?? URL(fileURLWithPath: "")
+        profileScreen?.userImageView.af.setImage(withURL: url)
+    }
+    
     private func addPicture() {
         pickerController.allowsEditing = false
         pickerController.sourceType = .photoLibrary
         present(pickerController, animated: true, completion: nil)
     }
+    
+    private func saveUserData(name: String, birthday: String, gender: String, image: String) {
+        let dataPath = "users/\(UUID().uuidString)"
+        let docRef = firestore.document(dataPath)
+        docRef.setData([
+            "name": name,
+            "birthday": birthday,
+            "gender": gender,
+            "image": image
+        ])
+    }
+    
+    private func saveUserImage() {
+        guard let image = profileScreen?.userImageView.image?.jpegData(compressionQuality: 0.8) else {return}
+        
+        let imagePath = "userImages/\(UUID().uuidString).jpg"
+
+        let imageRef = storage.child(imagePath)
+        
+        imageRef.putData(image, metadata: nil) { metadata, error in
+            
+            if error == nil && metadata != nil {
+                imageRef.downloadURL { url, error in
+                    if error == nil{
+                        if let urlImagem = url?.absoluteString{
+                            self.firestore.collection("images").document().setData([
+                                "url": urlImagem
+                            ])
+                            self.completionReport(with: urlImagem)
+                        }
+                    }else{
+                        self.completionReport()
+                    }
+                }
+            }else{
+                self.completionReport()
+            }
+        }
+    }
+    
+    private func completionReport(with url: String = ""){
+        saveUserData(name: profileScreen?.nameTextField.text ?? "", birthday: profileScreen?.birthdayTextField.text ?? "", gender: profileScreen?.genderTextField.text ?? "", image: url)
+    }
+    
+    func getUserData() {
+        firestore.collection("users").getDocuments { snapshot, error in
+            
+            if error == nil {
+                if let snapshot = snapshot {
+                    
+                    DispatchQueue.main.async {
+                        self.user = snapshot.documents.map { document in
+                            return User(id: document.documentID,
+                                        name: document["name"] as? String ?? "",
+                                        birthday: document["birthday"] as? String ?? "",
+                                        gender: document["gender"] as? String ?? "",
+                                        image: document["image"] as? String ?? "")
+                        }
+                        self.initialConfig()
+                    }
+                }
+                
+            } else {
+                //handle errors
+            }
+        }
+    }
+    
 }
 
 //MARK: - ProfileScreenProtocol
@@ -43,12 +129,8 @@ extension ProfileViewController: ProfileScreenProtocol {
         addPicture()
     }
     
-    func changePasswordButtonAction() {
-        
-    }
-    
     func saveButtonAction() {
-        
+        saveUserImage()
     }
     
     func logOutButtonAction() {
@@ -56,8 +138,8 @@ extension ProfileViewController: ProfileScreenProtocol {
             try auth?.signOut()
             let vc: LoginViewController = LoginViewController()
             navigationController?.pushViewController(vc, animated: true)
-        } catch let signOutError {
-            alert?.configAlert(title: "Ops", message: signOutError.localizedDescription)
+        } catch _ {
+            alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.wipeOut.rawValue)
         }
     }
 }

@@ -15,13 +15,13 @@ class ForecastService: ForecastServiceProtocol {
     func getForecast(completion: @escaping completion<[Hour]?>) {
         let forecastURL: String = "https://api.stormglass.io/v2"
         
-        let urlString: String = "\(forecastURL)/weather/point?lat=\(-23.030645)&lng=\(-43.475481)&params=waveHeight,swellDirection,wavePeriod,windSpeed,windDirection"
+        let urlString: String = "\(forecastURL)/weather/point?lat=\(-17.84649323280926)&lng=\(-149.26349967363493)&params=waveHeight,swellDirection,wavePeriod,windSpeed,windDirection"
         
         guard let url: URL = URL(string: urlString) else {
             return completion(nil, Error.errorDescription(message: "Erro de URL"))
         }
         
-        let header = ["Authorization": "adbe76ae-e1e9-11ec-ab6b-0242ac130002-adbe7712-e1e9-11ec-ab6b-0242ac130002"]
+        let header = ["Authorization": "4bb0326e-d55e-11ec-9346-0242ac130002-4bb032e6-d55e-11ec-9346-0242ac130002"]
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = header
         request.httpMethod = "GET"

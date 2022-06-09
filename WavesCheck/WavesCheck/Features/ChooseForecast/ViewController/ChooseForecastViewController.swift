@@ -12,20 +12,13 @@ class ChooseForecastViewController: UIViewController {
     
     var states: [StatesModel] = [
         StatesModel(state: "São Paulo", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Santa Catarina", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Rio de Janeiro", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Espírito Santo", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Paraná", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Bahia", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Sergipe", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Alagoas", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Pernambuco", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Paraíba", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Rio Grande do Norte", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Ceará", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Piauí", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Maranhão", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"]),
-        StatesModel(state: "Pará", opened: false, beaches: ["Guarujá", "Santos", "Maresias", "Camburi", "Ubatuba"])
+        StatesModel(state: "Rio de Janeiro", opened: false, beaches: ["Grumari", "Prainha", "Praia da Macumba", "Itacoatiara", "Canto do Recreio"]),
+        StatesModel(state: "Santa Catarina", opened: false, beaches: ["Florianópolis", "Imbituba", "Garopaba", "Bombinhas", "Balneário Cambuiriú"]),
+        StatesModel(state: "Espírito Santo", opened: false, beaches: ["Regência", "Jacaraípe", "Solemar", "Barrote", "Amigão"]),
+        StatesModel(state: "Paraná", opened: false, beaches: ["Guaratuba", "Matinhos", "Ilha do Mel", "Pontal do Paraná", "Paraguaios"]),
+        StatesModel(state: "Bahia", opened: false, beaches: ["Prainha", "Farol da Barra", "Stella", "Vilas do Atlântico", "Pescador"]),
+        StatesModel(state: "Pernambuco", opened: false, beaches: ["Cacimba do Padre", "Praia da Conceição", "Praia do Boldró", "Praia do Meio", "Praia do Bode"]),
+        StatesModel(state: "Rio Grande do Norte", opened: false, beaches: ["Baía Formosa", "Pontal", "Pipa", "Artistas", "Escadaria"])
     ]
     
     var state: [State] = [
@@ -35,15 +28,8 @@ class ChooseForecastViewController: UIViewController {
         State(state: "Espírito Santo", opened: false),
         State(state: "Paraná", opened: false),
         State(state: "Bahia", opened: false),
-        State(state: "Sergipe", opened: false),
-        State(state: "Alagoas", opened: false),
         State(state: "Pernambuco", opened: false),
-        State(state: "Paraíba", opened: false),
-        State(state: "Rio Grande do Norte", opened: false),
-        State(state: "Ceará", opened: false),
-        State(state: "Piauí", opened: false),
-        State(state: "Maranhão", opened: false),
-        State(state: "Pará", opened: false)
+        State(state: "Rio Grande do Norte", opened: false)
     ]
     
     override func loadView() {
@@ -94,7 +80,7 @@ extension ChooseForecastViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ChooseForecastTableViewCell.identifier, for: indexPath) as? ChooseForecastTableViewCell
-        cell?.setUpCell(state: states[indexPath.row].beaches[indexPath.row])
+        cell?.setUpCell(state: states[indexPath.section].beaches[indexPath.row])
         cell?.delegate(delegate: self)
         return cell ?? UITableViewCell()
     }

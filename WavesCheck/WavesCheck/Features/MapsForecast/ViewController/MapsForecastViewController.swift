@@ -9,9 +9,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class CheckForecastViewController: UIViewController {
+class MapsForecastViewController: UIViewController {
     
-    var checkForecastScreen: CheckForecastScreen = CheckForecastScreen()
+    var checkForecastScreen: MapsForecastScreen = MapsForecastScreen()
     let locationManager = CLLocationManager()
     var alert: Alert?
     var previousLocation: CLLocation?
@@ -24,7 +24,7 @@ class CheckForecastViewController: UIViewController {
     ]
     
     override func loadView() {
-        checkForecastScreen = CheckForecastScreen()
+        checkForecastScreen = MapsForecastScreen()
         view = checkForecastScreen
     }
     
@@ -38,7 +38,9 @@ class CheckForecastViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        checkForecastScreen.navigateButton.isHidden = true
+        if checkForecastScreen.searchTextField.text == K.emptyString.rawValue {
+            checkForecastScreen.navigateButton.isHidden = true
+        }
     }
 
 //MARK: - Maps Management
@@ -188,14 +190,16 @@ class CheckForecastViewController: UIViewController {
 
 //MARK: - MapViewProtocol
 
-extension CheckForecastViewController: CheckForecastScreenProtocol {
+extension MapsForecastViewController: MapsForecastScreenProtocol {
     func selfLocationButtonAction() {
         startTrackinUserLocation()
     }
     
     func searchButtonAction() {
         getAddress()
-        checkForecastScreen.navigateButton.isHidden = false
+        if checkForecastScreen.searchTextField.text != K.emptyString.rawValue {
+            checkForecastScreen.navigateButton.isHidden = false
+        }
     }
     
     func navigateButtonAction() {
@@ -205,7 +209,7 @@ extension CheckForecastViewController: CheckForecastScreenProtocol {
 
 //MARK: - NearLocationsTableViewCellProtocol
 
-extension CheckForecastViewController: NearLocationsTableViewCellProtocol {
+extension MapsForecastViewController: NearLocationsTableViewCellProtocol {
     func goButtonAction() {
         let vc: ForecastViewController = ForecastViewController()
         navigationController?.pushViewController(vc, animated: true)
@@ -214,7 +218,7 @@ extension CheckForecastViewController: NearLocationsTableViewCellProtocol {
 
 //MARK: - CLLocationManagerDelegate
 
-extension CheckForecastViewController: CLLocationManagerDelegate {
+extension MapsForecastViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     }
     
@@ -225,7 +229,7 @@ extension CheckForecastViewController: CLLocationManagerDelegate {
 
 //MARK: - MKMapViewDelegate
 
-extension CheckForecastViewController: MKMapViewDelegate {
+extension MapsForecastViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = .blue
@@ -235,7 +239,7 @@ extension CheckForecastViewController: MKMapViewDelegate {
 
 //MARK: - TableView Delegate e DataSource
 
-extension CheckForecastViewController: UITableViewDataSource, UITableViewDelegate {
+extension MapsForecastViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.nearLocation.count

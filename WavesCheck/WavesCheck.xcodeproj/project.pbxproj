@@ -17,6 +17,8 @@
 		881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4102831B2B500E69CD3 /* RegisterScreen.swift */; };
 		881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */; };
 		881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */; };
+		883D7DFF28524CCE00257413 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D7DFE28524CCE00257413 /* ProfileViewModel.swift */; };
+		883D7E04285279E700257413 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883D7E03285279E700257413 /* User.swift */; };
 		8851BDD12851A7AF00AD6D82 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851BDD02851A7AF00AD6D82 /* K.swift */; };
 		885641D028483CBD00C6C96B /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641CF28483CBD00C6C96B /* ForecastViewController.swift */; };
 		885641D228483CF400C6C96B /* ForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885641D128483CF400C6C96B /* ForecastScreen.swift */; };
@@ -39,10 +41,10 @@
 		8899441128519AA30013E7CB /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899441028519AA30013E7CB /* GenericService.swift */; };
 		8899441428519CD20013E7CB /* ForecastTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899441328519CD20013E7CB /* ForecastTableViewCellViewModel.swift */; };
 		88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC5612832654A003E5DE5 /* TabBarController.swift */; };
-		88DEC56828326665003E5DE5 /* CheckForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */; };
+		88DEC56828326665003E5DE5 /* MapsForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56728326665003E5DE5 /* MapsForecastViewController.swift */; };
 		88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */; };
 		88DEC572283266EE003E5DE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC571283266EE003E5DE5 /* ProfileViewController.swift */; };
-		88DEC57528326BF9003E5DE5 /* CheckForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57428326BF9003E5DE5 /* CheckForecastScreen.swift */; };
+		88DEC57528326BF9003E5DE5 /* MapsForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57428326BF9003E5DE5 /* MapsForecastScreen.swift */; };
 		88DEC57828327375003E5DE5 /* NearLocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57728327375003E5DE5 /* NearLocationsTableViewCell.swift */; };
 		88DEC57B28327396003E5DE5 /* NearLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57A28327396003E5DE5 /* NearLocation.swift */; };
 		88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC57D28327B3A003E5DE5 /* ReportsScreen.swift */; };
@@ -66,6 +68,8 @@
 		881FF4102831B2B500E69CD3 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreen.swift; sourceTree = "<group>"; };
 		881FF4172831B86700E69CD3 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
+		883D7DFE28524CCE00257413 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		883D7E03285279E700257413 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8851BDD02851A7AF00AD6D82 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		885641CF28483CBD00C6C96B /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		885641D128483CF400C6C96B /* ForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastScreen.swift; sourceTree = "<group>"; };
@@ -88,10 +92,10 @@
 		8899441028519AA30013E7CB /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		8899441328519CD20013E7CB /* ForecastTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		88DEC5612832654A003E5DE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForecastViewController.swift; sourceTree = "<group>"; };
+		88DEC56728326665003E5DE5 /* MapsForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsForecastViewController.swift; sourceTree = "<group>"; };
 		88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		88DEC571283266EE003E5DE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		88DEC57428326BF9003E5DE5 /* CheckForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForecastScreen.swift; sourceTree = "<group>"; };
+		88DEC57428326BF9003E5DE5 /* MapsForecastScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsForecastScreen.swift; sourceTree = "<group>"; };
 		88DEC57728327375003E5DE5 /* NearLocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearLocationsTableViewCell.swift; sourceTree = "<group>"; };
 		88DEC57A28327396003E5DE5 /* NearLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearLocation.swift; sourceTree = "<group>"; };
 		88DEC57D28327B3A003E5DE5 /* ReportsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsScreen.swift; sourceTree = "<group>"; };
@@ -166,13 +170,13 @@
 		881FF403283187D400E69CD3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8886E68228523B410010AC41 /* ChooseForecast */,
 				88DEC5662832663E003E5DE5 /* Profile */,
 				88DEC5642832662C003E5DE5 /* Reports */,
 				885641E328484D2D00C6C96B /* AddReports */,
 				885641DA2848407400C6C96B /* Info */,
 				885641C928483C6A00C6C96B /* Forecast */,
-				88DEC5632832661F003E5DE5 /* CheckForecast */,
+				8886E68228523B410010AC41 /* ChooseForecast */,
+				88DEC5632832661F003E5DE5 /* MapsForecast */,
 				88DEC56028326504003E5DE5 /* TabBar */,
 				881FF4122831B82800E69CD3 /* PasswordChange */,
 				881FF40B2831B28200E69CD3 /* Register */,
@@ -254,6 +258,22 @@
 				881FF4152831B85400E69CD3 /* PasswordChangeScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		883D7DFD28524CBB00257413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				883D7DFE28524CCE00257413 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		883D7E02285279DA00257413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				883D7E03285279E700257413 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8851BDCF2851A79C00AD6D82 /* Constants */ = {
@@ -469,7 +489,7 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		88DEC5632832661F003E5DE5 /* CheckForecast */ = {
+		88DEC5632832661F003E5DE5 /* MapsForecast */ = {
 			isa = PBXGroup;
 			children = (
 				88DEC5792832738A003E5DE5 /* Model */,
@@ -477,7 +497,7 @@
 				88DEC57328326BAE003E5DE5 /* Screen */,
 				88DEC56928326669003E5DE5 /* ViewController */,
 			);
-			path = CheckForecast;
+			path = MapsForecast;
 			sourceTree = "<group>";
 		};
 		88DEC5642832662C003E5DE5 /* Reports */ = {
@@ -494,6 +514,8 @@
 		88DEC5662832663E003E5DE5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				883D7E02285279DA00257413 /* Model */,
+				883D7DFD28524CBB00257413 /* ViewModel */,
 				88614CB728350E4C00523FA0 /* Screen */,
 				88DEC56C283266A5003E5DE5 /* ViewController */,
 			);
@@ -503,7 +525,7 @@
 		88DEC56928326669003E5DE5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */,
+				88DEC56728326665003E5DE5 /* MapsForecastViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -527,7 +549,7 @@
 		88DEC57328326BAE003E5DE5 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				88DEC57428326BF9003E5DE5 /* CheckForecastScreen.swift */,
+				88DEC57428326BF9003E5DE5 /* MapsForecastScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -715,16 +737,18 @@
 				881FF40F2831B2A800E69CD3 /* RegisterViewController.swift in Sources */,
 				885641D628483D7D00C6C96B /* Forecast.swift in Sources */,
 				8899441128519AA30013E7CB /* GenericService.swift in Sources */,
+				883D7E04285279E700257413 /* User.swift in Sources */,
 				88DEC57B28327396003E5DE5 /* NearLocation.swift in Sources */,
 				881FF40A2831884C00E69CD3 /* LoginViewController.swift in Sources */,
 				88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */,
 				885641D228483CF400C6C96B /* ForecastScreen.swift in Sources */,
 				881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */,
 				881FF3F22831865300E69CD3 /* SceneDelegate.swift in Sources */,
-				88DEC56828326665003E5DE5 /* CheckForecastViewController.swift in Sources */,
+				88DEC56828326665003E5DE5 /* MapsForecastViewController.swift in Sources */,
 				885641D428483D4500C6C96B /* ForecastTableViewCell.swift in Sources */,
+				883D7DFF28524CCE00257413 /* ProfileViewModel.swift in Sources */,
 				885641E2284841A600C6C96B /* InfoScreen.swift in Sources */,
-				88DEC57528326BF9003E5DE5 /* CheckForecastScreen.swift in Sources */,
+				88DEC57528326BF9003E5DE5 /* MapsForecastScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,17 @@
 import UIKit
 import MapKit
 
-protocol CheckForecastScreenProtocol: AnyObject {
+protocol MapsForecastScreenProtocol: AnyObject {
     func selfLocationButtonAction()
     func searchButtonAction()
     func navigateButtonAction()
 }
 
-class CheckForecastScreen: UIView {
+class MapsForecastScreen: UIView {
     
-    weak private var delegate: CheckForecastScreenProtocol?
+    weak private var delegate: MapsForecastScreenProtocol?
     
-    public func delegate(delegate: CheckForecastScreenProtocol) {
+    public func delegate(delegate: MapsForecastScreenProtocol) {
         self.delegate = delegate
     }
 

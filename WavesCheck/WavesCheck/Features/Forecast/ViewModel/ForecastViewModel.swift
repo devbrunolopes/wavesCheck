@@ -29,7 +29,6 @@ class ForecastViewModel {
         service.getForecast { success, error in
             if let success = success {
                 self.forecast = success
-                print(self.forecast)
                 self.delegate?.success()
             } else {
                 self.delegate?.error()
