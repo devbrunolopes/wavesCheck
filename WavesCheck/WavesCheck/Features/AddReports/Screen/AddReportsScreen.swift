@@ -10,6 +10,7 @@ import UIKit
 protocol AddReportsScreenProtocol: AnyObject {
     func addPicButtonAction()
     func addReportButtonAction()
+    func modalLineGestureAction()
 }
 
 class AddReportsScreen: UIView {
@@ -22,9 +23,11 @@ class AddReportsScreen: UIView {
     
     lazy var modalLineView: UIView = {
         let view = UIView()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.didTapModalLineGesture(_:)))
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         view.layer.cornerRadius = 7
+        view.addGestureRecognizer(tap)
         return view
     }()
     
@@ -177,6 +180,9 @@ class AddReportsScreen: UIView {
     @objc private func didTapAddReportButton() {
         delegate?.addReportButtonAction()
     }
+    
+    @objc private func didTapModalLineGesture(_ sender: UITapGestureRecognizer) {
+        delegate?.modalLineGestureAction()    }
     
     //MARK: - Public Functions
     

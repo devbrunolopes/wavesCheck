@@ -12,6 +12,7 @@ pod 'Firebase/Core'
 pod 'FirebaseFirestore'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+pod 'AlamofireImage', '~> 4.1'
 pod 'TransitionButton'
 
 end

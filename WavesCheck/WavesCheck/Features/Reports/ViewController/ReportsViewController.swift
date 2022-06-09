@@ -15,7 +15,6 @@ class ReportsViewController: UIViewController {
     var reportsScreen: ReportsScreen?
     var addReportsViewController: AddReportsViewController?
     let database = Firestore.firestore()
-    
     var reports: [Report] = []
     
     override func loadView() {

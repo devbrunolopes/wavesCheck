@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseStorage
+import Firebase
+import AlamofireImage
 
 class ReportsTableViewCell: UITableViewCell {
 
@@ -52,7 +55,6 @@ class ReportsTableViewCell: UITableViewCell {
         return label
     }()
     
-    
     //MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -72,17 +74,13 @@ class ReportsTableViewCell: UITableViewCell {
         locationLabel.text = "Local: \(report.nameLocation)"
         sizeLabel.text = "Tamanho: \(report.wavesSize)"
         conditionLabel.text = "Condição: \(report.surfCondition)"
-        
         let url = URL(string: report.surfImage) ?? URL(fileURLWithPath: "")
-        if let data = try? Data(contentsOf: url) {
-            self.locationImageView.image = UIImage(data: data)
-        }
+        locationImageView.af.setImage(withURL: url)
     }
 
     //MARK: - Private Functions
     
     private func addSubView() {
-//        self.contentView.addSubview(self.backGroundView)
         contentView.addSubview(locationLabel)
         contentView.addSubview(locationImageView)
         contentView.addSubview(sizeLabel)

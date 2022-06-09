@@ -190,6 +190,7 @@ class CheckForecastViewController: UIViewController {
 
 extension CheckForecastViewController: CheckForecastScreenProtocol {
     func selfLocationButtonAction() {
+        startTrackinUserLocation()
     }
     
     func searchButtonAction() {
@@ -198,7 +199,6 @@ extension CheckForecastViewController: CheckForecastScreenProtocol {
     }
     
     func navigateButtonAction() {
-        //alert avisando que vai sair do app
         showMaps()
     }
 }

@@ -32,8 +32,7 @@ class AddReportsViewController: UIViewController {
         
         let docRef = firestore.document("wavesCheck/reports")
         docRef.getDocument { snapshot, error in
-            guard let data = snapshot?.data(), error == nil else {return}
-            print(data)
+            guard let _ = snapshot?.data(), error == nil else {return}
         }
     }
     
@@ -50,28 +49,41 @@ class AddReportsViewController: UIViewController {
             "nameLocation": nameLocation,
             "wavesSize": wavesSize,
             "surfCondition": surfCondition,
-            "surfImage": image
+            "surfImage": image,
+            "reportDate": Date().timeIntervalSince1970
         ])
     }
     
     private func saveImageReport() {
-        // turn image into data
         guard let image = addReportsScreen?.locationImage.image?.jpegData(compressionQuality: 0.8) else {return}
         
-        // specify file path and name
         let imagePath = "reportImages/\(UUID().uuidString).jpg"
-        imageURL = imagePath
+
         let imageRef = storage.child(imagePath)
         
-        // upload that data
-        let uploadTask = imageRef.putData(image, metadata: nil) { metadata, error in
+        imageRef.putData(image, metadata: nil) { metadata, error in
             
             if error == nil && metadata != nil {
-                self.firestore.collection("images").document().setData([
-                    "url": imagePath
-                ])
+                imageRef.downloadURL { url, error in
+                    if error == nil{
+                        if let urlImagem = url?.absoluteString{
+                            self.firestore.collection("images").document().setData([
+                                "url": urlImagem
+                            ])
+                            self.completionReport(with: urlImagem)
+                        }
+                    }else{
+                        self.completionReport()
+                    }
+                }
+            }else{
+                self.completionReport()
             }
         }
+    }
+    
+    private func completionReport(with url:String = ""){
+        self.saveReport(nameLocation: self.addReportsScreen?.locationTextField.text ?? "", wavesSize: self.addReportsScreen?.wavesSizeTextField.text ?? "", surfCondition: self.addReportsScreen?.surfConditionTextField.text ?? "", image: url)
     }
 }
 
@@ -85,7 +97,11 @@ extension AddReportsViewController: AddReportsScreenProtocol {
     func addReportButtonAction() {
         print(#function)
         saveImageReport()
-        saveReport(nameLocation: addReportsScreen?.locationTextField.text ?? "", wavesSize: addReportsScreen?.wavesSizeTextField.text ?? "", surfCondition: addReportsScreen?.surfConditionTextField.text ?? "", image: imageURL)
+        dismiss(animated: true)
+    }
+    
+    func modalLineGestureAction() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
