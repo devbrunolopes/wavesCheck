@@ -30,6 +30,11 @@
 		88614CB928350E6C00523FA0 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CB828350E6C00523FA0 /* ProfileScreen.swift */; };
 		88614CBD2835165700523FA0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CBC2835165700523FA0 /* Alert.swift */; };
 		88614CBF28353B1700523FA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88614CBE28353B1700523FA0 /* GoogleService-Info.plist */; };
+		8886E68528523B590010AC41 /* StatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8886E68428523B590010AC41 /* StatesModel.swift */; };
+		8886E68828523B610010AC41 /* ChooseForecastHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8886E68728523B610010AC41 /* ChooseForecastHeaderView.swift */; };
+		8886E68B28523B6A0010AC41 /* ChooseForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8886E68A28523B6A0010AC41 /* ChooseForecastViewController.swift */; };
+		8886E68E28523B6F0010AC41 /* ChooseForecastScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8886E68D28523B6F0010AC41 /* ChooseForecastScreen.swift */; };
+		8886E69128523B740010AC41 /* ChooseForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8886E69028523B740010AC41 /* ChooseForecastTableViewCell.swift */; };
 		8899440F28519A8C0013E7CB /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899440E28519A8C0013E7CB /* ForecastService.swift */; };
 		8899441128519AA30013E7CB /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899441028519AA30013E7CB /* GenericService.swift */; };
 		8899441428519CD20013E7CB /* ForecastTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899441328519CD20013E7CB /* ForecastTableViewCellViewModel.swift */; };
@@ -74,6 +79,11 @@
 		88614CB828350E6C00523FA0 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		88614CBC2835165700523FA0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		88614CBE28353B1700523FA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8886E68428523B590010AC41 /* StatesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatesModel.swift; sourceTree = "<group>"; };
+		8886E68728523B610010AC41 /* ChooseForecastHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseForecastHeaderView.swift; sourceTree = "<group>"; };
+		8886E68A28523B6A0010AC41 /* ChooseForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseForecastViewController.swift; sourceTree = "<group>"; };
+		8886E68D28523B6F0010AC41 /* ChooseForecastScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseForecastScreen.swift; sourceTree = "<group>"; };
+		8886E69028523B740010AC41 /* ChooseForecastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseForecastTableViewCell.swift; sourceTree = "<group>"; };
 		8899440E28519A8C0013E7CB /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		8899441028519AA30013E7CB /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		8899441328519CD20013E7CB /* ForecastTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -156,6 +166,7 @@
 		881FF403283187D400E69CD3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8886E68228523B410010AC41 /* ChooseForecast */,
 				88DEC5662832663E003E5DE5 /* Profile */,
 				88DEC5642832662C003E5DE5 /* Reports */,
 				885641E328484D2D00C6C96B /* AddReports */,
@@ -379,6 +390,58 @@
 				88614CBC2835165700523FA0 /* Alert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		8886E68228523B410010AC41 /* ChooseForecast */ = {
+			isa = PBXGroup;
+			children = (
+				8886E68328523B590010AC41 /* Model */,
+				8886E68628523B610010AC41 /* HeaderView */,
+				8886E68F28523B740010AC41 /* Cell */,
+				8886E68C28523B6F0010AC41 /* Screen */,
+				8886E68928523B6A0010AC41 /* ViewController */,
+			);
+			path = ChooseForecast;
+			sourceTree = "<group>";
+		};
+		8886E68328523B590010AC41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8886E68428523B590010AC41 /* StatesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8886E68628523B610010AC41 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				8886E68728523B610010AC41 /* ChooseForecastHeaderView.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		8886E68928523B6A0010AC41 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8886E68A28523B6A0010AC41 /* ChooseForecastViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8886E68C28523B6F0010AC41 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8886E68D28523B6F0010AC41 /* ChooseForecastScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		8886E68F28523B740010AC41 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8886E69028523B740010AC41 /* ChooseForecastTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8899440D28519A710013E7CB /* Service */ = {
@@ -629,6 +692,9 @@
 				885641D028483CBD00C6C96B /* ForecastViewController.swift in Sources */,
 				885641E02848416D00C6C96B /* InfoViewController.swift in Sources */,
 				8899441428519CD20013E7CB /* ForecastTableViewCellViewModel.swift in Sources */,
+				8886E68528523B590010AC41 /* StatesModel.swift in Sources */,
+				8886E68828523B610010AC41 /* ChooseForecastHeaderView.swift in Sources */,
+				8886E69128523B740010AC41 /* ChooseForecastTableViewCell.swift in Sources */,
 				881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */,
 				8899440F28519A8C0013E7CB /* ForecastService.swift in Sources */,
 				881FF3F02831865300E69CD3 /* AppDelegate.swift in Sources */,
@@ -642,8 +708,10 @@
 				881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */,
 				885641D828483D9D00C6C96B /* ForecastViewModel.swift in Sources */,
 				885641E928484DCC00C6C96B /* AddReportsScreen.swift in Sources */,
+				8886E68B28523B6A0010AC41 /* ChooseForecastViewController.swift in Sources */,
 				885641E728484D7E00C6C96B /* AddReportsViewController.swift in Sources */,
 				881FF4112831B2B500E69CD3 /* RegisterScreen.swift in Sources */,
+				8886E68E28523B6F0010AC41 /* ChooseForecastScreen.swift in Sources */,
 				881FF40F2831B2A800E69CD3 /* RegisterViewController.swift in Sources */,
 				885641D628483D7D00C6C96B /* Forecast.swift in Sources */,
 				8899441128519AA30013E7CB /* GenericService.swift in Sources */,
