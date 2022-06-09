@@ -218,7 +218,7 @@ extension CheckForecastViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    private func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         checkLocationAuthorization()
     }
 }

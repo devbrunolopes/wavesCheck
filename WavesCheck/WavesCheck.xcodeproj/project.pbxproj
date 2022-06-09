@@ -32,6 +32,8 @@
 		88614CB928350E6C00523FA0 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CB828350E6C00523FA0 /* ProfileScreen.swift */; };
 		88614CBD2835165700523FA0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88614CBC2835165700523FA0 /* Alert.swift */; };
 		88614CBF28353B1700523FA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88614CBE28353B1700523FA0 /* GoogleService-Info.plist */; };
+		8899440F28519A8C0013E7CB /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899440E28519A8C0013E7CB /* ForecastService.swift */; };
+		8899441128519AA30013E7CB /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899441028519AA30013E7CB /* GenericService.swift */; };
 		88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC5612832654A003E5DE5 /* TabBarController.swift */; };
 		88DEC56828326665003E5DE5 /* CheckForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */; };
 		88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */; };
@@ -76,6 +78,8 @@
 		88614CB828350E6C00523FA0 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		88614CBC2835165700523FA0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		88614CBE28353B1700523FA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8899440E28519A8C0013E7CB /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
+		8899441028519AA30013E7CB /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		88DEC5612832654A003E5DE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		88DEC56728326665003E5DE5 /* CheckForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForecastViewController.swift; sourceTree = "<group>"; };
 		88DEC56D283266B9003E5DE5 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 		881FF3EE2831865300E69CD3 /* WavesCheck */ = {
 			isa = PBXGroup;
 			children = (
+				8899440D28519A710013E7CB /* Service */,
 				881FF403283187D400E69CD3 /* Features */,
 				88614CBA2835162B00523FA0 /* Commons */,
 				881FF3EF2831865300E69CD3 /* AppDelegate.swift */,
@@ -395,6 +400,15 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		8899440D28519A710013E7CB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8899440E28519A8C0013E7CB /* ForecastService.swift */,
+				8899441028519AA30013E7CB /* GenericService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		88DEC56028326504003E5DE5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +660,7 @@
 				88DEC570283266DB003E5DE5 /* FavoriteSpotsViewController.swift in Sources */,
 				885641E02848416D00C6C96B /* InfoViewController.swift in Sources */,
 				881FF4082831883A00E69CD3 /* LoginScreen.swift in Sources */,
+				8899440F28519A8C0013E7CB /* ForecastService.swift in Sources */,
 				881FF3F02831865300E69CD3 /* AppDelegate.swift in Sources */,
 				88DEC58428327D0C003E5DE5 /* Report.swift in Sources */,
 				88614CB628350D7300523FA0 /* LocationName.swift in Sources */,
@@ -662,6 +677,7 @@
 				881FF40F2831B2A800E69CD3 /* RegisterViewController.swift in Sources */,
 				885641D628483D7D00C6C96B /* Forecast.swift in Sources */,
 				88614CB028350CAB00523FA0 /* FavoriteSpotsScreen.swift in Sources */,
+				8899441128519AA30013E7CB /* GenericService.swift in Sources */,
 				88DEC57B28327396003E5DE5 /* NearLocation.swift in Sources */,
 				881FF40A2831884C00E69CD3 /* LoginViewController.swift in Sources */,
 				88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */,
