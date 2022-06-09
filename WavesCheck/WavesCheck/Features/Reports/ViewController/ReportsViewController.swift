@@ -33,7 +33,7 @@ class ReportsViewController: UIViewController {
     }
     
     func getData() {
-        database.collection("reports").getDocuments { snapshot, error in
+        database.collection("reports").order(by: "reportDate", descending: true).getDocuments { snapshot, error in
             
             if error == nil {
                 if let snapshot = snapshot {

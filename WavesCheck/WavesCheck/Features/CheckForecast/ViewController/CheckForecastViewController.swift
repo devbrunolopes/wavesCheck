@@ -138,7 +138,7 @@ class CheckForecastViewController: UIViewController {
         resetMapView(withNew: directions)
         directions.calculate { response , error in
             guard let response = response else {
-                if let error = error {
+                if error != nil {
                     //alert erro
                 }
                 return
