@@ -70,17 +70,14 @@ class MapsForecastViewController: UIViewController {
         switch locationManager.authorizationStatus {
         case .authorizedWhenInUse:
             startTrackinUserLocation()
-            break
         case .denied:
-            //show alert ensinar dar permnissao
-            break
+            alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.locationExperience.rawValue, completion: nil)
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
-            //show alert
-            break
+            alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.locationExperience.rawValue, completion: nil)
         case . authorizedAlways:
-            break
+            startTrackinUserLocation()
         @unknown default:
             break
         }
@@ -141,7 +138,7 @@ class MapsForecastViewController: UIViewController {
         directions.calculate { response , error in
             guard let response = response else {
                 if error != nil {
-                    //alert erro
+                    self.alert?.configAlert(title: K.Alerts.ops.rawValue, message: K.Alerts.noDirections.rawValue, completion: nil)
                 }
                 return
             }
@@ -253,7 +250,7 @@ extension MapsForecastViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return K.nearLocation.rawValue
+        return K.bestSpots.rawValue
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

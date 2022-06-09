@@ -13,6 +13,7 @@ enum K: String {
     case forgotPasswordLabel = "Use seu email cadastrado para recuperar a senha:"
     case cupertino = "cupertino"
     case nearLocation = "Locais próximos"
+    case bestSpots = "Melhores spots"
     
     enum Firebase: String {
         case wavesCheckReports = "wavesCheck/reports"
@@ -66,6 +67,7 @@ enum K: String {
         case sentEmail = "Email enviado com sucesso, verifique sua caixa de email/spam em instantes!"
         case locationExperience = "Para uma melhor experiência, autorizar o uso da sua localização!"
         case noLocationFound = "Não encontramos nenhuma localização :("
+        case noDirections = "Não conseguimos encontrar um caminho, tente novamente!"
     }
     
     enum URL: String {
