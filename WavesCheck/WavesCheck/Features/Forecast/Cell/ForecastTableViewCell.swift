@@ -116,8 +116,9 @@ class ForecastTableViewCell: UITableViewCell {
     }
     
     //MARK: - Public Functions
-    
-    public func setUpCell(forecast: Hour) {
+        
+    public func setUpCell(forecast: Hour, date: String) {
+        dateLabel.text = date
         wavesSizeLabel.text = "\(String(format: "%.1f", forecast.waveHeight?.noaa ?? 0))m"
         periodLabel.text = "\(String(format: "%.0f", forecast.wavePeriod?.noaa ?? 7))s"
         swellDirectionLabel.text = viewModel.getSwellDirectionString(parametro: forecast.swellDirection?.noaa ?? 0)

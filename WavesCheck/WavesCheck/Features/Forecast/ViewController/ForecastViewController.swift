@@ -56,7 +56,7 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ForecastTableViewCell.identifier) as? ForecastTableViewCell
-        cell?.setUpCell(forecast: viewModel.forecast[indexPath.row])
+        cell?.setUpCell(forecast: viewModel.forecast[indexPath.row], date: viewModel.dates[indexPath.row])
         return cell ?? UITableViewCell()
     }
     

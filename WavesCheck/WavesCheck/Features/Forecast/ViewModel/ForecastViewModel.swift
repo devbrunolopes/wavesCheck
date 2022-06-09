@@ -21,6 +21,8 @@ class ForecastViewModel {
         self.delegate = delegate
     }
     
+    let dates: [String] = [ "Quinta-feira 09/06", "Sexta-feira 10/06", "Sábado 11/06", "Domingo 12/06", "Segunda-feira 13/06", "Terça-feira 14/06", "Quarta-feira 15/06", "Quinta-feira 16/06", "Sexta-feira 17/06", "Sábado 18/06", ]
+    
     private let service: ForecastService = ForecastService()
     
     var forecast: [Hour] = []
@@ -39,4 +41,5 @@ class ForecastViewModel {
     public var forecastCount: Int {
         return 10
     }
+
 }
