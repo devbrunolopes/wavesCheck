@@ -71,7 +71,9 @@ extension ReportsViewController: ReportsScreenProtocol {
 
 extension ReportsViewController: AddReportsViewControllerProtocol {
     func reloadReportsTableView() {
-        reportsScreen?.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.reportsScreen?.tableView.reloadData()
+        }
     }
 }
 

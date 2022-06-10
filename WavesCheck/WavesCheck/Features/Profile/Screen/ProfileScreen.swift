@@ -25,6 +25,7 @@ class ProfileScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(systemName: "person.fill")
+        image.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
         image.contentMode = .scaleAspectFill
         image.layer.cornerRadius = 50
         image.layer.masksToBounds = false

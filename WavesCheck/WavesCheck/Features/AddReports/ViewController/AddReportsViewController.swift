@@ -95,6 +95,10 @@ class AddReportsViewController: UIViewController {
 //MARK: - AddReportsScreenProtocol
 
 extension AddReportsViewController: AddReportsScreenProtocol {
+    func dissmisButtonAction() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func addPicButtonAction() {
         addPicture()
     }
@@ -103,10 +107,6 @@ extension AddReportsViewController: AddReportsScreenProtocol {
         saveImageReport()
         delegate?.reloadReportsTableView()
         dismiss(animated: true)
-    }
-    
-    func modalLineGestureAction() {
-        self.dismiss(animated: true, completion: nil)
     }
 }
 

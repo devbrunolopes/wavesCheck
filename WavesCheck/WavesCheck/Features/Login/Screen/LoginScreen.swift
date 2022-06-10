@@ -50,6 +50,7 @@ class LoginScreen: UIView {
         textField.layer.borderWidth = 1.0
         textField.keyboardType = .emailAddress
         textField.placeholder = K.TextFields.email.rawValue
+        textField.text = "brunolopes0203@gmail.com"
         textField.textColor = .darkGray
         textField.autocapitalizationType = .none
         return textField
@@ -68,6 +69,7 @@ class LoginScreen: UIView {
         textField.placeholder = K.TextFields.password.rawValue
         textField.textColor = .darkGray
         textField.autocapitalizationType = .none
+        textField.text = "123456789"
         textField.isSecureTextEntry = true
         return textField
     }()

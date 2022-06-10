@@ -10,7 +10,7 @@ import UIKit
 protocol AddReportsScreenProtocol: AnyObject {
     func addPicButtonAction()
     func addReportButtonAction()
-    func modalLineGestureAction()
+    func dissmisButtonAction()
 }
 
 class AddReportsScreen: UIView {
@@ -21,14 +21,13 @@ class AddReportsScreen: UIView {
         self.delegate = delegate
     }
     
-    lazy var modalLineView: UIView = {
-        let view = UIView()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.didTapModalLineGesture(_:)))
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
-        view.layer.cornerRadius = 7
-        view.addGestureRecognizer(tap)
-        return view
+    lazy var closeButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "xmark"), for: .normal)
+        button.tintColor = UIColor(red: 55/255, green: 67/255, blue: 91/255, alpha: 1.0)
+        button.addTarget(self, action: #selector(didTapCloseButton), for: .touchUpInside)
+        return button
     }()
     
     lazy var addReportLabel: UILabel = {
@@ -181,8 +180,9 @@ class AddReportsScreen: UIView {
         delegate?.addReportButtonAction()
     }
     
-    @objc private func didTapModalLineGesture(_ sender: UITapGestureRecognizer) {
-        delegate?.modalLineGestureAction()    }
+    @objc private func didTapCloseButton() {
+        delegate?.dissmisButtonAction()
+    }
     
     //MARK: - Public Functions
     
@@ -200,7 +200,7 @@ class AddReportsScreen: UIView {
     }
     
     private func configSuperView() {
-        addSubview(modalLineView)
+        addSubview(closeButton)
         addSubview(addReportLabel)
         addSubview(lineView)
         addSubview(locationLabel)
@@ -217,12 +217,12 @@ class AddReportsScreen: UIView {
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
             
-            modalLineView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
-            modalLineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 100),
-            modalLineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100),
-            modalLineView.heightAnchor.constraint(equalToConstant: 2),
+            closeButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
+            closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
+            closeButton.heightAnchor.constraint(equalToConstant: 30),
+            closeButton.widthAnchor.constraint(equalToConstant: 30),
             
-            addReportLabel.topAnchor.constraint(equalTo: modalLineView.bottomAnchor, constant: 20),
+            addReportLabel.topAnchor.constraint(equalTo: closeButton.bottomAnchor, constant: 5),
             addReportLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             addReportLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             
