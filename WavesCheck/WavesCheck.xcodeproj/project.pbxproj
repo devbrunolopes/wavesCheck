@@ -52,6 +52,10 @@
 		88DEC58128327C70003E5DE5 /* ReportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC58028327C70003E5DE5 /* ReportsTableViewCell.swift */; };
 		88DEC58428327D0C003E5DE5 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEC58328327D0C003E5DE5 /* Report.swift */; };
 		BD4EAE922E30792F48200F9D /* Pods_WavesCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC1E3384791EB802A4CF80F /* Pods_WavesCheck.framework */; };
+		BEB04A4828CE9BE0004ABB94 /* OndasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB04A4728CE9BE0004ABB94 /* OndasViewController.swift */; };
+		BEB04A4A28CE9BEA004ABB94 /* Ondas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB04A4928CE9BEA004ABB94 /* Ondas.storyboard */; };
+		BEB04A4D28CE9BFB004ABB94 /* OndasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB04A4B28CE9BFB004ABB94 /* OndasTableViewCell.swift */; };
+		BEB04A4E28CE9BFB004ABB94 /* OndasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB04A4C28CE9BFB004ABB94 /* OndasTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +108,10 @@
 		88DEC58028327C70003E5DE5 /* ReportsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsTableViewCell.swift; sourceTree = "<group>"; };
 		88DEC58328327D0C003E5DE5 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		AAE94CA2D4B269D0A994AB8C /* Pods-WavesCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCheck.debug.xcconfig"; path = "Target Support Files/Pods-WavesCheck/Pods-WavesCheck.debug.xcconfig"; sourceTree = "<group>"; };
+		BEB04A4728CE9BE0004ABB94 /* OndasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OndasViewController.swift; sourceTree = "<group>"; };
+		BEB04A4928CE9BEA004ABB94 /* Ondas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ondas.storyboard; sourceTree = "<group>"; };
+		BEB04A4B28CE9BFB004ABB94 /* OndasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OndasTableViewCell.swift; sourceTree = "<group>"; };
+		BEB04A4C28CE9BFB004ABB94 /* OndasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OndasTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +180,7 @@
 		881FF403283187D400E69CD3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				BEB04A4328CE9BBA004ABB94 /* Ondas */,
 				88DEC5662832663E003E5DE5 /* Profile */,
 				88DEC5642832662C003E5DE5 /* Reports */,
 				885641E328484D2D00C6C96B /* AddReports */,
@@ -605,6 +614,41 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BEB04A4328CE9BBA004ABB94 /* Ondas */ = {
+			isa = PBXGroup;
+			children = (
+				BEB04A4628CE9BCE004ABB94 /* Cell */,
+				BEB04A4528CE9BC5004ABB94 /* Storyboard */,
+				BEB04A4428CE9BBF004ABB94 /* ViewController */,
+			);
+			path = Ondas;
+			sourceTree = "<group>";
+		};
+		BEB04A4428CE9BBF004ABB94 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BEB04A4728CE9BE0004ABB94 /* OndasViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BEB04A4528CE9BC5004ABB94 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BEB04A4928CE9BEA004ABB94 /* Ondas.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BEB04A4628CE9BCE004ABB94 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BEB04A4B28CE9BFB004ABB94 /* OndasTableViewCell.swift */,
+				BEB04A4C28CE9BFB004ABB94 /* OndasTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -665,6 +709,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB04A4A28CE9BEA004ABB94 /* Ondas.storyboard in Resources */,
+				BEB04A4E28CE9BFB004ABB94 /* OndasTableViewCell.xib in Resources */,
 				881FF3FC2831865400E69CD3 /* LaunchScreen.storyboard in Resources */,
 				881FF3F92831865400E69CD3 /* Assets.xcassets in Resources */,
 				88614CBF28353B1700523FA0 /* GoogleService-Info.plist in Resources */,
@@ -738,6 +784,7 @@
 				88DEC5622832654A003E5DE5 /* TabBarController.swift in Sources */,
 				88DEC58128327C70003E5DE5 /* ReportsTableViewCell.swift in Sources */,
 				88DEC56E283266B9003E5DE5 /* ReportsViewController.swift in Sources */,
+				BEB04A4828CE9BE0004ABB94 /* OndasViewController.swift in Sources */,
 				881FF4182831B86700E69CD3 /* PasswordChangeViewController.swift in Sources */,
 				885641D828483D9D00C6C96B /* ForecastViewModel.swift in Sources */,
 				883D7E072852AA4200257413 /* ChooseForecastViewModel.swift in Sources */,
@@ -755,6 +802,7 @@
 				88DEC57E28327B3A003E5DE5 /* ReportsScreen.swift in Sources */,
 				885641D228483CF400C6C96B /* ForecastScreen.swift in Sources */,
 				881FF4162831B85400E69CD3 /* PasswordChangeScreen.swift in Sources */,
+				BEB04A4D28CE9BFB004ABB94 /* OndasTableViewCell.swift in Sources */,
 				881FF3F22831865300E69CD3 /* SceneDelegate.swift in Sources */,
 				88DEC56828326665003E5DE5 /* MapsForecastViewController.swift in Sources */,
 				885641D428483D4500C6C96B /* ForecastTableViewCell.swift in Sources */,

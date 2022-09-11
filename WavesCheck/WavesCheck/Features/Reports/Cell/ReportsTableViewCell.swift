@@ -74,8 +74,7 @@ class ReportsTableViewCell: UITableViewCell {
         locationLabel.text = "Local: \(report.nameLocation)"
         sizeLabel.text = "Tamanho: \(report.wavesSize)"
         conditionLabel.text = "Condição: \(report.surfCondition)"
-        let url = URL(string: report.surfImage) ?? URL(fileURLWithPath: "")
-        locationImageView.af.setImage(withURL: url)
+         
     }
 
     //MARK: - Private Functions
